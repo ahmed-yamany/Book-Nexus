@@ -17,7 +17,13 @@
 		73F08FE92966F76500E41566 /* Book_NexusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FE82966F76500E41566 /* Book_NexusUITestsLaunchTests.swift */; };
 		73F08FF62966F96700E41566 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 73F08FF52966F96700E41566 /* README.md */; };
 		73F08FF82966F97100E41566 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 73F08FF72966F97000E41566 /* LICENSE */; };
-		73F08FFC2966FE0F00E41566 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FFB2966FE0F00E41566 /* Colors.swift */; };
+		73F08FFC2966FE0F00E41566 /* ColorsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FFB2966FE0F00E41566 /* ColorsManager.swift */; };
+		73F08FFE29670B8200E41566 /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FFD29670B8200E41566 /* ImagesManager.swift */; };
+		73F090012967145D00E41566 /* UIView+MakeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F090002967145D00E41566 /* UIView+MakeConstraints.swift */; };
+		73F0900429672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0900329672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift */; };
+		73F0900629672BC800E41566 /* UIView+SizeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0900529672BC800E41566 /* UIView+SizeConstraints.swift */; };
+		73F0900829672C4C00E41566 /* UIView+FillSuperviewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0900729672C4C00E41566 /* UIView+FillSuperviewConstraints.swift */; };
+		73F0900D296745D900E41566 /* BlueredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0900C296745D900E41566 /* BlueredView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +58,13 @@
 		73F08FE82966F76500E41566 /* Book_NexusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_NexusUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		73F08FF52966F96700E41566 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		73F08FF72966F97000E41566 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		73F08FFB2966FE0F00E41566 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		73F08FFB2966FE0F00E41566 /* ColorsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsManager.swift; sourceTree = "<group>"; };
+		73F08FFD29670B8200E41566 /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
+		73F090002967145D00E41566 /* UIView+MakeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MakeConstraints.swift"; sourceTree = "<group>"; };
+		73F0900329672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CenterInSuperviewConstraints.swift"; sourceTree = "<group>"; };
+		73F0900529672BC800E41566 /* UIView+SizeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SizeConstraints.swift"; sourceTree = "<group>"; };
+		73F0900729672C4C00E41566 /* UIView+FillSuperviewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FillSuperviewConstraints.swift"; sourceTree = "<group>"; };
+		73F0900C296745D900E41566 /* BlueredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueredView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +117,8 @@
 			children = (
 				73F08FF92966F9F900E41566 /* Resources */,
 				73F08FFA2966FDDE00E41566 /* Manager */,
-				73F08FC92966F76400E41566 /* LoginViewController.swift */,
+				73F08FFF2967144500E41566 /* Extensions */,
+				73F090092967446500E41566 /* Core */,
 				73F08FD02966F76400E41566 /* LaunchScreen.storyboard */,
 				73F08FD32966F76400E41566 /* Info.plist */,
 				73F08FF52966F96700E41566 /* README.md */,
@@ -144,9 +157,54 @@
 		73F08FFA2966FDDE00E41566 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				73F08FFB2966FE0F00E41566 /* Colors.swift */,
+				73F08FFB2966FE0F00E41566 /* ColorsManager.swift */,
+				73F08FFD29670B8200E41566 /* ImagesManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		73F08FFF2967144500E41566 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				73F090022967146700E41566 /* UIView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		73F090022967146700E41566 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				73F090002967145D00E41566 /* UIView+MakeConstraints.swift */,
+				73F0900329672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift */,
+				73F0900529672BC800E41566 /* UIView+SizeConstraints.swift */,
+				73F0900729672C4C00E41566 /* UIView+FillSuperviewConstraints.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		73F090092967446500E41566 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				73F0900A2967447C00E41566 /* Login&SignupFlow */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		73F0900A2967447C00E41566 /* Login&SignupFlow */ = {
+			isa = PBXGroup;
+			children = (
+				73F0900B2967458100E41566 /* SubClasses */,
+				73F08FC92966F76400E41566 /* LoginViewController.swift */,
+			);
+			path = "Login&SignupFlow";
+			sourceTree = "<group>";
+		};
+		73F0900B2967458100E41566 /* SubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				73F0900C296745D900E41566 /* BlueredView.swift */,
+			);
+			path = SubClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +340,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				73F08FCA2966F76400E41566 /* LoginViewController.swift in Sources */,
-				73F08FFC2966FE0F00E41566 /* Colors.swift in Sources */,
+				73F0900429672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift in Sources */,
+				73F08FFE29670B8200E41566 /* ImagesManager.swift in Sources */,
+				73F08FFC2966FE0F00E41566 /* ColorsManager.swift in Sources */,
+				73F090012967145D00E41566 /* UIView+MakeConstraints.swift in Sources */,
 				73F08FC62966F76400E41566 /* AppDelegate.swift in Sources */,
+				73F0900629672BC800E41566 /* UIView+SizeConstraints.swift in Sources */,
 				73F08FC82966F76400E41566 /* SceneDelegate.swift in Sources */,
+				73F0900D296745D900E41566 /* BlueredView.swift in Sources */,
+				73F0900829672C4C00E41566 /* UIView+FillSuperviewConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
