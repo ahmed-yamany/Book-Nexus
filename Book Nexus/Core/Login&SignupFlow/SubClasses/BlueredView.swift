@@ -25,7 +25,7 @@ class BluredView: UIView{
     
     private func layoutBluerEffectView(){
         addSubview(bluredEffectView)
-        bluredEffectView.alpha = 0.9
+        bluredEffectView.alpha = 0.85
         bluredEffectView.fillSuperviewConstraints()
         bluredEffectView.contentView.layer.cornerRadius = 15
     }

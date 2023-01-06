@@ -12,6 +12,7 @@
 		730041E929681EF50051B588 /* AccentGreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041E829681EF50051B588 /* AccentGreenButton.swift */; };
 		730041EC2968210A0051B588 /* UITextField+SetPaddingPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */; };
 		730041EE2968221A0051B588 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041ED2968221A0051B588 /* FormTextField.swift */; };
+		730E8501296845E800FB9D0C /* SocialMediaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E8500296845E800FB9D0C /* SocialMediaButton.swift */; };
 		73F08FC62966F76400E41566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC52966F76400E41566 /* AppDelegate.swift */; };
 		73F08FC82966F76400E41566 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC72966F76400E41566 /* SceneDelegate.swift */; };
 		73F08FCA2966F76400E41566 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC92966F76400E41566 /* LoginViewController.swift */; };
@@ -54,6 +55,7 @@
 		730041E829681EF50051B588 /* AccentGreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentGreenButton.swift; sourceTree = "<group>"; };
 		730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SetPaddingPoints.swift"; sourceTree = "<group>"; };
 		730041ED2968221A0051B588 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		730E8500296845E800FB9D0C /* SocialMediaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaButton.swift; sourceTree = "<group>"; };
 		73F08FC22966F76400E41566 /* Book Nexus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Nexus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F08FC52966F76400E41566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F08FC72966F76400E41566 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				73F0900C296745D900E41566 /* BlueredView.swift */,
 				730041E32968184E0051B588 /* LoginSignUpFlowViewController.swift */,
 				730041ED2968221A0051B588 /* FormTextField.swift */,
+				730E8500296845E800FB9D0C /* SocialMediaButton.swift */,
 			);
 			path = SubClasses;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				730041E929681EF50051B588 /* AccentGreenButton.swift in Sources */,
 				73F090012967145D00E41566 /* UIView+MakeConstraints.swift in Sources */,
 				730041EC2968210A0051B588 /* UITextField+SetPaddingPoints.swift in Sources */,
+				730E8501296845E800FB9D0C /* SocialMediaButton.swift in Sources */,
 				73F08FC62966F76400E41566 /* AppDelegate.swift in Sources */,
 				730041E42968184E0051B588 /* LoginSignUpFlowViewController.swift in Sources */,
 				73F0900629672BC800E41566 /* UIView+SizeConstraints.swift in Sources */,
