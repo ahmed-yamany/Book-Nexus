@@ -8,74 +8,93 @@
 import UIKit
 import SwiftUI
 
-class LoginViewController: UIViewController {
-    // MARK: - View controller subViews
-     private let imageView: UIImageView = {
-         let image = UIImageView(image: ImageManager.LoginSignUpFlow)
-         image.contentMode = .scaleToFill
-         return image
+class LoginViewController: LoginSignUpFlowViewController {
+    // MARK: - View controller SubViews
+    let emailTextField = FormTextField("Email")
+    let continueButton = AccentGreenButton("Continue")
+    let forgotPasswordButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Forgot password?", for: .normal)
+        button.setTitleColor(ColorsManager.accentGreen, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        return button
     }()
-    
-    let blueredView: BluredView = BluredView()
-    
-    let stackView: UIStackView = {
+    let spliterView: UIView = {
+        let view = UIView()
+        let spliterView = UIView()
+        view.addSubview(spliterView)
+
+        spliterView.heightConstraints(1)
+        spliterView.centerYInSuperviewConstraints()
+        spliterView.fillXSuperViewConstraints()
+        spliterView.backgroundColor = .darkGray
+        
+        let bluredView = BluredView()
+        view.addSubview(bluredView)
+        bluredView.widthConstraints(60)
+        bluredView.heightConstraints(20)
+        bluredView.centerInSuperviewConstraints()
+
+        let orLabel = UILabel()
+        bluredView.addSubview(orLabel)
+        orLabel.backgroundColor = ColorsManager.accentBlack
+        orLabel.text = "Or"
+        orLabel.textColor = .gray
+        orLabel.widthConstraints(50)
+        orLabel.textAlignment = .center
+        orLabel.centerInSuperviewConstraints()
+        
+        return view
+    }()
+    let facebookButton = SocialMediaButton("Login with Facebook", with: ImageManager.facebook)
+    let googleButton = SocialMediaButton("Login with Google", with: ImageManager.google)
+    let appleButton = SocialMediaButton("Login with Apple", with: ImageManager.apple)
+    let signupView: UIView = {
+        let view = UIView()
+        
         let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 10
+        view.addSubview(stackView)
+        stackView.centerInSuperviewConstraints()
+        stackView.axis = .horizontal
+        stackView.spacing = 5
         
+        let label = UILabel()
+        stackView.addArrangedSubview(label)
+        label.text = "Don’t have an account?"
+        label.textColor = .white
         
-        return stackView
+        let button = UIButton()
+        button.setTitle("Sign up", for: .normal)
+        button.setTitleColor(ColorsManager.accentGreen, for: .normal)
+        stackView.addArrangedSubview(button)
+//
+        return view
     }()
-    
-    
-    
+
     
     // MARK: - View controller lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.text = "Log in"
         
-        view.addSubview(imageView)
-        imageView.fillSuperviewConstraints()
-        
-        view.addSubview(blueredView)
-        blueredView.updateLayoute()
-        
-        ///
-        
-        blueredView.addSubview(stackView)
-        stackView.fillSuperviewConstraints(UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
-        
-//
-        stackView.arrangedSubviews.forEach { view in
-            view.heightConstraints(48)
-            view.layer.cornerRadius = 8
-        }
+        stackView.addArrangedSubview(emailTextField)
+        stackView.addArrangedSubview(continueButton)
+        stackView.addArrangedSubview(forgotPasswordButton)
+        stackView.addArrangedSubview(spliterView)
+        stackView.addArrangedSubview(facebookButton)
+        stackView.addArrangedSubview(googleButton)
+        stackView.addArrangedSubview(appleButton)
+        stackView.addArrangedSubview(signupView)
 
-//        let button = UIButton()
-//        button.setTitle("Continue", for: .normal)
-//        button.setTitleColor(ColorsManager.accentBlack, for: .normal)
-//        button.backgroundColor = ColorsManager.accentGreen
-//        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
-//
-//
-//        let button2 = UIButton()
-//        button2.setTitle("Ahmed yamany", for: .normal)
-//        button2.tintColor = .white
-//        button2.backgroundColor = .blue
-//
-//
-//        stackView.addArrangedSubview(button)
-//        stackView.addArrangedSubview(button2)
-//
-        
-        
+        stackView.updateArrangedSubviewsLayout()
+        forgotPasswordButton.heightConstraints(22)
+
     }
-    
-    
-    
-
 
 }
+
+
+
 
 //extension
 struct LoginView: UIViewControllerRepresentable {
