@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730041E42968184E0051B588 /* LoginSignUpFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041E32968184E0051B588 /* LoginSignUpFlowViewController.swift */; };
+		730041E729681B360051B588 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041E629681B360051B588 /* VerticalStackView.swift */; };
+		730041E929681EF50051B588 /* AccentGreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041E829681EF50051B588 /* AccentGreenButton.swift */; };
+		730041EC2968210A0051B588 /* UITextField+SetPaddingPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */; };
+		730041EE2968221A0051B588 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041ED2968221A0051B588 /* FormTextField.swift */; };
 		73F08FC62966F76400E41566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC52966F76400E41566 /* AppDelegate.swift */; };
 		73F08FC82966F76400E41566 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC72966F76400E41566 /* SceneDelegate.swift */; };
 		73F08FCA2966F76400E41566 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC92966F76400E41566 /* LoginViewController.swift */; };
@@ -44,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		730041E32968184E0051B588 /* LoginSignUpFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpFlowViewController.swift; sourceTree = "<group>"; };
+		730041E629681B360051B588 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
+		730041E829681EF50051B588 /* AccentGreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentGreenButton.swift; sourceTree = "<group>"; };
+		730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SetPaddingPoints.swift"; sourceTree = "<group>"; };
+		730041ED2968221A0051B588 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		73F08FC22966F76400E41566 /* Book Nexus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Nexus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F08FC52966F76400E41566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F08FC72966F76400E41566 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +102,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		730041E529681B090051B588 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+				730041E629681B360051B588 /* VerticalStackView.swift */,
+				730041E829681EF50051B588 /* AccentGreenButton.swift */,
+			);
+			path = Subclass;
+			sourceTree = "<group>";
+		};
+		730041EA296820DF0051B588 /* UITextFileld */ = {
+			isa = PBXGroup;
+			children = (
+				730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */,
+			);
+			path = UITextFileld;
+			sourceTree = "<group>";
+		};
 		73F08FB92966F76400E41566 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +145,7 @@
 				73F08FF92966F9F900E41566 /* Resources */,
 				73F08FFA2966FDDE00E41566 /* Manager */,
 				73F08FFF2967144500E41566 /* Extensions */,
+				730041E529681B090051B588 /* Subclass */,
 				73F090092967446500E41566 /* Core */,
 				73F08FD02966F76400E41566 /* LaunchScreen.storyboard */,
 				73F08FD32966F76400E41566 /* Info.plist */,
@@ -167,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				73F090022967146700E41566 /* UIView */,
+				730041EA296820DF0051B588 /* UITextFileld */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -203,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				73F0900C296745D900E41566 /* BlueredView.swift */,
+				730041E32968184E0051B588 /* LoginSignUpFlowViewController.swift */,
+				730041ED2968221A0051B588 /* FormTextField.swift */,
 			);
 			path = SubClasses;
 			sourceTree = "<group>";
@@ -340,11 +371,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				73F08FCA2966F76400E41566 /* LoginViewController.swift in Sources */,
+				730041EE2968221A0051B588 /* FormTextField.swift in Sources */,
+				730041E729681B360051B588 /* VerticalStackView.swift in Sources */,
 				73F0900429672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift in Sources */,
 				73F08FFE29670B8200E41566 /* ImagesManager.swift in Sources */,
 				73F08FFC2966FE0F00E41566 /* ColorsManager.swift in Sources */,
+				730041E929681EF50051B588 /* AccentGreenButton.swift in Sources */,
 				73F090012967145D00E41566 /* UIView+MakeConstraints.swift in Sources */,
+				730041EC2968210A0051B588 /* UITextField+SetPaddingPoints.swift in Sources */,
 				73F08FC62966F76400E41566 /* AppDelegate.swift in Sources */,
+				730041E42968184E0051B588 /* LoginSignUpFlowViewController.swift in Sources */,
 				73F0900629672BC800E41566 /* UIView+SizeConstraints.swift in Sources */,
 				73F08FC82966F76400E41566 /* SceneDelegate.swift in Sources */,
 				73F0900D296745D900E41566 /* BlueredView.swift in Sources */,
