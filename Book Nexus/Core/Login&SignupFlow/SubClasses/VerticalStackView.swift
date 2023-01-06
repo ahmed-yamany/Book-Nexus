@@ -18,10 +18,12 @@ class VerticalStackView: UIStackView{
     }
     
     
-    public func updateArrangedSubviewsLayout(){
+    public func updateArrangedSubviewsLayout(ignor: [UIView] = []){
         arrangedSubviews.forEach { view in
-            view.heightConstraints(48)
-            view.layer.cornerRadius = 8
+            if !ignor.contains(view){
+                view.heightConstraints(48)
+                view.layer.cornerRadius = 8
+            }
         }
 
     }

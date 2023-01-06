@@ -104,15 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		730041E529681B090051B588 /* Subclass */ = {
-			isa = PBXGroup;
-			children = (
-				730041E629681B360051B588 /* VerticalStackView.swift */,
-				730041E829681EF50051B588 /* AccentGreenButton.swift */,
-			);
-			path = Subclass;
-			sourceTree = "<group>";
-		};
 		730041EA296820DF0051B588 /* UITextFileld */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +138,6 @@
 				73F08FF92966F9F900E41566 /* Resources */,
 				73F08FFA2966FDDE00E41566 /* Manager */,
 				73F08FFF2967144500E41566 /* Extensions */,
-				730041E529681B090051B588 /* Subclass */,
 				73F090092967446500E41566 /* Core */,
 				73F08FD02966F76400E41566 /* LaunchScreen.storyboard */,
 				73F08FD32966F76400E41566 /* Info.plist */,
@@ -233,6 +223,8 @@
 		73F0900B2967458100E41566 /* SubClasses */ = {
 			isa = PBXGroup;
 			children = (
+				730041E629681B360051B588 /* VerticalStackView.swift */,
+				730041E829681EF50051B588 /* AccentGreenButton.swift */,
 				73F0900C296745D900E41566 /* BlueredView.swift */,
 				730041E32968184E0051B588 /* LoginSignUpFlowViewController.swift */,
 				730041ED2968221A0051B588 /* FormTextField.swift */,

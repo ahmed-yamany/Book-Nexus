@@ -86,7 +86,7 @@ class LoginViewController: LoginSignUpFlowViewController {
         stackView.addArrangedSubview(appleButton)
         stackView.addArrangedSubview(signupView)
 
-        stackView.updateArrangedSubviewsLayout()
+        stackView.updateArrangedSubviewsLayout(ignor: [forgotPasswordButton])
         forgotPasswordButton.heightConstraints(22)
 
     }
