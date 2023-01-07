@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let widowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: widowScene.coordinateSpace.bounds)
         window?.windowScene = widowScene
-        window?.rootViewController = LoginViewController()
+        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
         window?.makeKeyAndVisible()
     }
 

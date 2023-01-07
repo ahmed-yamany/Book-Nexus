@@ -8,13 +8,16 @@
 import UIKit
 
 class BluredView: UIView{
+    // Create a blure effect and a visual effect view with the blur effect
     lazy var blurEffect = UIBlurEffect(style: .systemMaterialDark)
-    lazy var bluredEffectView = UIVisualEffectView(effect: blurEffect)
+    lazy var visualEffectView = UIVisualEffectView(effect: blurEffect)
     
-    init(){
+    // Initialize the view and add the visual effect view as a subview
+    override init(frame: CGRect){
         super.init(frame: .zero)
-        layoutBluerEffectView()
+        layoutVisualEffectView()
         
+        // Set the corner radius and enable clipping of the view's content
         layer.cornerRadius = 15
         clipsToBounds = true
     }
@@ -23,11 +26,13 @@ class BluredView: UIView{
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func layoutBluerEffectView(){
-        addSubview(bluredEffectView)
-        bluredEffectView.alpha = 0.85
-        bluredEffectView.fillSuperviewConstraints()
-        bluredEffectView.contentView.layer.cornerRadius = 15
+    // Add the visual effect view as a subview to the view and set its layout
+    private func layoutVisualEffectView(){
+        addSubview(visualEffectView)
+        
+        visualEffectView.alpha = 0.85
+        visualEffectView.fillSuperviewConstraints()
+        visualEffectView.contentView.layer.cornerRadius = 15
     }
     
 }

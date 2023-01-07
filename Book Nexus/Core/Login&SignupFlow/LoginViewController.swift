@@ -9,26 +9,26 @@ import UIKit
 import SwiftUI
 
 class LoginViewController: LoginSignUpFlowViewController {
-    // MARK: - View controller SubViews
+    // MARK: - SubViews
     let emailTextField = FormTextField("Email")
     let continueButton = AccentGreenButton("Continue")
     let forgotPasswordButton: UIButton = {
         let button = UIButton()
         button.setTitle("Forgot password?", for: .normal)
         button.setTitleColor(ColorsManager.accentGreen, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        button.titleLabel?.font = .systemFont(ofSize: 15, weight: .bold)
         return button
     }()
-    let spliterView: UIView = {
+    let splitterView: UIView = {
         let view = UIView()
-        let spliterView = UIView()
-        view.addSubview(spliterView)
+        let splitterView = UIView()
+        view.addSubview(splitterView)
 
-        spliterView.heightConstraints(1)
-        spliterView.centerYInSuperviewConstraints()
-        spliterView.fillXSuperViewConstraints()
-        spliterView.backgroundColor = .darkGray
-        
+        splitterView.heightConstraints(1)
+        splitterView.centerYInSuperviewConstraints()
+        splitterView.fillXSuperViewConstraints()
+        splitterView.backgroundColor = .darkGray
+
         let bluredView = BluredView()
         view.addSubview(bluredView)
         bluredView.widthConstraints(60)
@@ -43,60 +43,45 @@ class LoginViewController: LoginSignUpFlowViewController {
         orLabel.widthConstraints(50)
         orLabel.textAlignment = .center
         orLabel.centerInSuperviewConstraints()
-        
+
         return view
-    }()
+        }()
     let facebookButton = SocialMediaButton("Login with Facebook", with: ImageManager.facebook)
     let googleButton = SocialMediaButton("Login with Google", with: ImageManager.google)
     let appleButton = SocialMediaButton("Login with Apple", with: ImageManager.apple)
-    let signupView: UIView = {
-        let view = UIView()
-        
-        let stackView = UIStackView()
-        view.addSubview(stackView)
-        stackView.centerInSuperviewConstraints()
-        stackView.axis = .horizontal
-        stackView.spacing = 5
-        
-        let label = UILabel()
-        stackView.addArrangedSubview(label)
-        label.text = "Don’t have an account?"
-        label.textColor = .white
-        
-        let button = UIButton()
-        button.setTitle("Sign up", for: .normal)
-        button.setTitleColor(ColorsManager.accentGreen, for: .normal)
-        stackView.addArrangedSubview(button)
-//
-        return view
-    }()
 
     
     // MARK: - View controller lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = "Log in"
+        title = "Log in"
+        titleLabel.text = title
+        navigationItem.title = ""
+        navigationItem.backButtonTitle = "back to Log in"
+        navigationController?.navigationBar.tintColor = .white
         
-        stackView.addArrangedSubview(emailTextField)
-        stackView.addArrangedSubview(continueButton)
-        stackView.addArrangedSubview(forgotPasswordButton)
-        stackView.addArrangedSubview(spliterView)
-        stackView.addArrangedSubview(facebookButton)
-        stackView.addArrangedSubview(googleButton)
-        stackView.addArrangedSubview(appleButton)
-        stackView.addArrangedSubview(signupView)
-
-        stackView.updateArrangedSubviewsLayout()
+        // Add a target action to the forgot password button
+        forgotPasswordButton.addTarget(self, action: #selector(self.forgotPasswordTapped), for: .touchUpInside)
         forgotPasswordButton.heightConstraints(22)
 
+        // Create the navigation view
+        let navigationView = createNavigationView(labelText: "Don't have an account?", buttonTitle: "Sign up")
+
+        // Add the views to the stack view and configure the layout
+        stackView.addArrangedSubviews([
+                emailTextField, continueButton, forgotPasswordButton, splitterView,
+                facebookButton, googleButton, appleButton, navigationView
+            ])
+        stackView.updateArrangedSubviewsLayout(ignoring: [forgotPasswordButton])
+    }
+    
+    // This method is called when the forgot password button is tapped
+    @objc func forgotPasswordTapped(){
+        navigationController?.pushViewController(RecoverPasswordViewController(), animated: true)
     }
 
 }
 
-
-
-
-//extension
 struct LoginView: UIViewControllerRepresentable {
     
     typealias UIViewControllerType = UIViewController
