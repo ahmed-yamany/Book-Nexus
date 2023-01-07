@@ -8,51 +8,67 @@
 import UIKit
 
 struct AnchoredConstraints {
-    var top, leading, bottom, trailing, width, height: NSLayoutConstraint?
+    // These properties store the constraints for the edges and size of the view
+    var top: NSLayoutConstraint?
+    var leading: NSLayoutConstraint?
+    var bottom: NSLayoutConstraint?
+    var trailing: NSLayoutConstraint?
+    var width: NSLayoutConstraint?
+    var height: NSLayoutConstraint?
 }
-
 extension UIView{
     
+    // This method creates constraints for the edges and size of the view
     @discardableResult
-    func makeConstraints(
-        top: NSLayoutYAxisAnchor? = nil,
-        bottom: NSLayoutYAxisAnchor? = nil,
-        leading: NSLayoutXAxisAnchor? = nil,
-        trailing: NSLayoutXAxisAnchor? = nil,
-        padding: UIEdgeInsets = .zero,
-        size: CGSize = .zero) -> AnchoredConstraints {
-            
+      func makeConstraints(
+          topAnchor: NSLayoutYAxisAnchor? = nil,
+          bottomAnchor: NSLayoutYAxisAnchor? = nil,
+          leadingAnchor: NSLayoutXAxisAnchor? = nil,
+          trailingAnchor: NSLayoutXAxisAnchor? = nil,
+          padding: UIEdgeInsets = .zero,
+          size: CGSize = .zero ) -> AnchoredConstraints {
+              
+            // Tell the view to disable automatic constraints
             translatesAutoresizingMaskIntoConstraints = false
+          
+            // Create an instance of anchoredConstraints to store the constraints
             var anchoredConstraints = AnchoredConstraints()
-            
-            if let top = top {
-                anchoredConstraints.top = topAnchor.constraint(equalTo: top, constant: padding.top)
+
+            // If a top anchor is provided, create a constraint for the top edge of the view
+            if let topAnchor = topAnchor {
+                anchoredConstraints.top = self.topAnchor.constraint(equalTo: topAnchor, constant: padding.top)
+            }
+
+            // If a leading anchor is provided, create a constraint for the leading edge of the view
+            if let leadingAnchor = leadingAnchor {
+                anchoredConstraints.leading = self.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding.left)
+            }
+
+            // If a bottom anchor is provided, create a constraint for the bottom edge of the view
+            if let bottomAnchor = bottomAnchor {
+                anchoredConstraints.bottom = self.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding.bottom)
+            }
+                  
+            // If a trailing anchor is provided, create a constraint for the trailing edge of the view
+            if let trailingAnchor = trailingAnchor {
+                anchoredConstraints.trailing = self.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding.right)
             }
             
-            if let leading = leading {
-                anchoredConstraints.leading = leadingAnchor.constraint(equalTo: leading, constant: padding.left)
-            }
-            
-            if let bottom = bottom {
-                anchoredConstraints.bottom = bottomAnchor.constraint(equalTo: bottom, constant: -padding.bottom)
-            }
-            
-            if let trailing = trailing {
-                anchoredConstraints.trailing = trailingAnchor.constraint(equalTo: trailing, constant: -padding.right)
-            }
-            
+            // If a width value is provided, create a constraint for the width of the view
             if size.width != 0 {
-                anchoredConstraints.width = widthAnchor.constraint(equalToConstant: size.width)
+              anchoredConstraints.width = widthAnchor.constraint(equalToConstant: size.width)
             }
-            
+
+            // If a height value is provided, create a constraint for the height of the view
             if size.height != 0 {
-                anchoredConstraints.height = heightAnchor.constraint(equalToConstant: size.height)
+              anchoredConstraints.height = heightAnchor.constraint(equalToConstant: size.height)
             }
-            
-            [anchoredConstraints.top, anchoredConstraints.leading, anchoredConstraints.bottom, anchoredConstraints.trailing, anchoredConstraints.width, anchoredConstraints.height].forEach{ $0?.isActive = true }
-            
+
+            // Activate all of the constraints
+            [anchoredConstraints.top, anchoredConstraints.leading, anchoredConstraints.bottom, anchoredConstraints.trailing, anchoredConstraints.width, anchoredConstraints.height].forEach { $0?.isActive = true }
+
+            // Return the anchoredConstraints instance
             return anchoredConstraints
-            
         }
 }
 

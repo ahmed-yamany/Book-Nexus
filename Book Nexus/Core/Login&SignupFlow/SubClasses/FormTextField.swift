@@ -13,7 +13,6 @@ class FormTextField: UITextField{
         self.placeholder = placeholder
         self.backgroundColor = .white
         self.setLeftPaddingPoints(20)
-    
     }
     
     required init?(coder: NSCoder) {

@@ -14,14 +14,15 @@ class SocialMediaButton: UIButton{
         backgroundColor = .white
         setTitle(title, for: .normal)
         setTitleColor(ColorsManager.accentBlack, for: .normal)
-        titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
         
+        // Create an image view with the specified image and add it to the button
         let imageView = UIImageView(image: image)
         addSubview(imageView)
-        imageView.centerYInSuperviewConstraints()
-        imageView.makeConstraints(leading: leadingAnchor, padding: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0))
         
-
+        // Constrain the image view to be centered on the y-axis of the button and have a leading edge 20 points from the leading edge of the button
+        imageView.centerYInSuperviewConstraints()
+        imageView.makeConstraints(leadingAnchor: leadingAnchor, padding: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0))
     }
     
     required init?(coder: NSCoder) {
