@@ -18,7 +18,7 @@ class RecoverPasswordViewController: LoginSignUpFlowViewController {
           return label
     }()
     private let emailTextField = FormTextField("Email")
-    private let continueButton = AccentGreenButton("Continue")
+    private let sumbiteButton = AccentGreenButton("Submit")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +27,22 @@ class RecoverPasswordViewController: LoginSignUpFlowViewController {
         titleLabel.text = "Recover Password"
         
         // Create a navigation view using the createNavigationView function
-        let navigationView = createNavigationView(labelText: "Don't have an account?", buttonTitle: "Sign up")
+        let signupView = createNavigationView(labelText: "Don't have an account?", buttonTitle: "Sign up", action: #selector(self.signupButtonTapped))
 
         // Add the views to the stack view and configure the layout
-        stackView.addArrangedSubviews([overviewLabel, emailTextField, continueButton, navigationView])
+        stackView.addArrangedSubviews([overviewLabel, emailTextField, sumbiteButton, signupView])
         stackView.updateArrangedSubviewsLayout()
-
+        
+        
+        sumbiteButton.addTarget(self, action: #selector(self.submitButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func submitButtonTapped(){
+        navigationController?.pushViewController(VerifyCodeViewController(), animated: true)
+    }
+    
+    @objc func signupButtonTapped(){
+        navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
 }
 

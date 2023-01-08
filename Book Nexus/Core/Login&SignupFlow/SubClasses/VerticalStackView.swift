@@ -12,7 +12,7 @@ class VerticalStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         axis = .vertical
-        spacing = 10
+        spacing = 15
     }
 
     // Implement the required initializer to throw a fatal error

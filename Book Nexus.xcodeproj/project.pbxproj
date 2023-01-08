@@ -14,9 +14,14 @@
 		730041EE2968221A0051B588 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041ED2968221A0051B588 /* FormTextField.swift */; };
 		730E8501296845E800FB9D0C /* SocialMediaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E8500296845E800FB9D0C /* SocialMediaButton.swift */; };
 		737B6D75296881D60076648A /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B6D74296881D60076648A /* RecoverPasswordViewController.swift */; };
+		73BAE35A2969E45A00565FF8 /* LoginPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BAE3592969E45A00565FF8 /* LoginPasswordViewController.swift */; };
+		73BAE35C2969EE6F00565FF8 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BAE35B2969EE6F00565FF8 /* UserDetailView.swift */; };
+		73BAE35E2969F86500565FF8 /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BAE35D2969F86500565FF8 /* VerifyCodeViewController.swift */; };
+		73BAE3622969FF6900565FF8 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BAE3612969FF6900565FF8 /* SetPasswordViewController.swift */; };
+		73BAE364296A05C400565FF8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BAE363296A05C400565FF8 /* SignUpViewController.swift */; };
 		73F08FC62966F76400E41566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC52966F76400E41566 /* AppDelegate.swift */; };
 		73F08FC82966F76400E41566 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC72966F76400E41566 /* SceneDelegate.swift */; };
-		73F08FCA2966F76400E41566 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC92966F76400E41566 /* LoginViewController.swift */; };
+		73F08FCA2966F76400E41566 /* LoginEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC92966F76400E41566 /* LoginEmailViewController.swift */; };
 		73F08FCF2966F76400E41566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F08FCE2966F76400E41566 /* Assets.xcassets */; };
 		73F08FD22966F76400E41566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F08FD02966F76400E41566 /* LaunchScreen.storyboard */; };
 		73F08FDD2966F76500E41566 /* Book_NexusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FDC2966F76500E41566 /* Book_NexusTests.swift */; };
@@ -58,10 +63,15 @@
 		730041ED2968221A0051B588 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		730E8500296845E800FB9D0C /* SocialMediaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaButton.swift; sourceTree = "<group>"; };
 		737B6D74296881D60076648A /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		73BAE3592969E45A00565FF8 /* LoginPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordViewController.swift; sourceTree = "<group>"; };
+		73BAE35B2969EE6F00565FF8 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		73BAE35D2969F86500565FF8 /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
+		73BAE3612969FF6900565FF8 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
+		73BAE363296A05C400565FF8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		73F08FC22966F76400E41566 /* Book Nexus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Nexus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F08FC52966F76400E41566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F08FC72966F76400E41566 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		73F08FC92966F76400E41566 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		73F08FC92966F76400E41566 /* LoginEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailViewController.swift; sourceTree = "<group>"; };
 		73F08FCE2966F76400E41566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73F08FD12966F76400E41566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73F08FD32966F76400E41566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +122,25 @@
 				730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */,
 			);
 			path = UITextFileld;
+			sourceTree = "<group>";
+		};
+		73BAE35F2969FF2200565FF8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				73F08FC92966F76400E41566 /* LoginEmailViewController.swift */,
+				73BAE3592969E45A00565FF8 /* LoginPasswordViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		73BAE3602969FF3400565FF8 /* Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				737B6D74296881D60076648A /* RecoverPasswordViewController.swift */,
+				73BAE35D2969F86500565FF8 /* VerifyCodeViewController.swift */,
+				73BAE3612969FF6900565FF8 /* SetPasswordViewController.swift */,
+			);
+			path = "Forgot Password";
 			sourceTree = "<group>";
 		};
 		73F08FB92966F76400E41566 = {
@@ -217,8 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				73F0900B2967458100E41566 /* SubClasses */,
-				73F08FC92966F76400E41566 /* LoginViewController.swift */,
-				737B6D74296881D60076648A /* RecoverPasswordViewController.swift */,
+				73BAE35F2969FF2200565FF8 /* Login */,
+				73BAE3602969FF3400565FF8 /* Forgot Password */,
+				73BAE363296A05C400565FF8 /* SignUpViewController.swift */,
 			);
 			path = "Login&SignupFlow";
 			sourceTree = "<group>";
@@ -226,12 +256,13 @@
 		73F0900B2967458100E41566 /* SubClasses */ = {
 			isa = PBXGroup;
 			children = (
+				730041E32968184E0051B588 /* LoginSignUpFlowViewController.swift */,
 				730041E629681B360051B588 /* VerticalStackView.swift */,
 				730041E829681EF50051B588 /* AccentGreenButton.swift */,
 				73F0900C296745D900E41566 /* BlueredView.swift */,
 				730041ED2968221A0051B588 /* FormTextField.swift */,
 				730E8500296845E800FB9D0C /* SocialMediaButton.swift */,
-				730041E32968184E0051B588 /* LoginSignUpFlowViewController.swift */,
+				73BAE35B2969EE6F00565FF8 /* UserDetailView.swift */,
 			);
 			path = SubClasses;
 			sourceTree = "<group>";
@@ -368,7 +399,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73F08FCA2966F76400E41566 /* LoginViewController.swift in Sources */,
+				73BAE364296A05C400565FF8 /* SignUpViewController.swift in Sources */,
+				73BAE35C2969EE6F00565FF8 /* UserDetailView.swift in Sources */,
+				73F08FCA2966F76400E41566 /* LoginEmailViewController.swift in Sources */,
+				73BAE35A2969E45A00565FF8 /* LoginPasswordViewController.swift in Sources */,
 				730041EE2968221A0051B588 /* FormTextField.swift in Sources */,
 				730041E729681B360051B588 /* VerticalStackView.swift in Sources */,
 				73F0900429672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift in Sources */,
@@ -382,9 +416,11 @@
 				73F08FC62966F76400E41566 /* AppDelegate.swift in Sources */,
 				730041E42968184E0051B588 /* LoginSignUpFlowViewController.swift in Sources */,
 				73F0900629672BC800E41566 /* UIView+SizeConstraints.swift in Sources */,
+				73BAE35E2969F86500565FF8 /* VerifyCodeViewController.swift in Sources */,
 				73F08FC82966F76400E41566 /* SceneDelegate.swift in Sources */,
 				73F0900D296745D900E41566 /* BlueredView.swift in Sources */,
 				73F0900829672C4C00E41566 /* UIView+FillSuperviewConstraints.swift in Sources */,
+				73BAE3622969FF6900565FF8 /* SetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

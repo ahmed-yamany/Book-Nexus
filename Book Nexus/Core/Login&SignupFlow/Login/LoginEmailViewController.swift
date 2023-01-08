@@ -8,17 +8,10 @@
 import UIKit
 import SwiftUI
 
-class LoginViewController: LoginSignUpFlowViewController {
+class LoginEmailViewController: LoginSignUpFlowViewController {
     // MARK: - SubViews
     let emailTextField = FormTextField("Email")
     let continueButton = AccentGreenButton("Continue")
-    let forgotPasswordButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Forgot password?", for: .normal)
-        button.setTitleColor(ColorsManager.accentGreen, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 15, weight: .bold)
-        return button
-    }()
     let splitterView: UIView = {
         let view = UIView()
         let splitterView = UIView()
@@ -60,43 +53,55 @@ class LoginViewController: LoginSignUpFlowViewController {
         navigationItem.backButtonTitle = "back to Log in"
         navigationController?.navigationBar.tintColor = .white
         
-        // Add a target action to the forgot password button
+        // Create and Add a target action to the forgot password button
+        let forgotPasswordButton = createNavigationButton(with: "Forgot password?")
         forgotPasswordButton.addTarget(self, action: #selector(self.forgotPasswordTapped), for: .touchUpInside)
         forgotPasswordButton.heightConstraints(22)
 
         // Create the navigation view
-        let navigationView = createNavigationView(labelText: "Don't have an account?", buttonTitle: "Sign up")
+        let signupView = createNavigationView(labelText: "Don't have an account?", buttonTitle: "Sign up", action: #selector(self.signupButtonTapped))
 
         // Add the views to the stack view and configure the layout
         stackView.addArrangedSubviews([
                 emailTextField, continueButton, forgotPasswordButton, splitterView,
-                facebookButton, googleButton, appleButton, navigationView
+                facebookButton, googleButton, appleButton, signupView
             ])
         stackView.updateArrangedSubviewsLayout(ignoring: [forgotPasswordButton])
+        
+        // Add a target action to continue button
+        continueButton.addTarget(self, action: #selector(self.continueButtonTapped), for: .touchUpInside)
+        
     }
     
     // This method is called when the forgot password button is tapped
-    @objc func forgotPasswordTapped(){
+    @objc private func forgotPasswordTapped(){
         navigationController?.pushViewController(RecoverPasswordViewController(), animated: true)
     }
-
+    @objc private func continueButtonTapped(){
+        navigationController?.pushViewController(LoginPasswordViewController(), animated: true)
+    }
+    
+    @objc private func signupButtonTapped(){
+        navigationController?.pushViewController(SignUpViewController(), animated: true)
+    }
+    
 }
 
-struct LoginView: UIViewControllerRepresentable {
+struct LoginEmailView: UIViewControllerRepresentable {
     
     typealias UIViewControllerType = UIViewController
 
     func makeUIViewController(context: Context) -> UIViewController {
-        return LoginViewController()
+        return LoginEmailViewController()
     }
     
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct LoginEmailView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginEmailView()
             .ignoresSafeArea()
     }
 }
