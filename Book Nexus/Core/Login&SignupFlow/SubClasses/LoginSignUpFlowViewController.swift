@@ -50,29 +50,29 @@ class LoginSignUpFlowViewController: UIViewController {
         stackView.fillSuperviewConstraints(UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
     }
     
-    
     // Define a function that creates and returns a navigation view
-    func createNavigationView(labelText: String, buttonTitle: String) -> UIView {
+    func createNavigationView(labelText: String, buttonTitle: String, axis: NSLayoutConstraint.Axis = .horizontal, action: Selector) -> UIView {
         // Create the view
         let view = UIView()
 
         // Create the stack view and add it as a subview to the view
         let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = 5
+        stackView.axis = axis
+        stackView.spacing = 0
         view.addSubview(stackView)
 
         // Create the label and add it as an arranged subview to the stack view
         let label = UILabel()
         label.text = labelText
         label.textColor = .white
+        label.font = .systemFont(ofSize: 14)
+        label.numberOfLines = 0
         stackView.addArrangedSubview(label)
 
-        // Create the button and add it as an arranged subview to the stack view
-        let button = UIButton()
-        button.setTitle(buttonTitle, for: .normal)
-        button.setTitleColor(ColorsManager.accentGreen, for: .normal)
+        // Create the navigation button and add it as an arranged subview to the stack view
+        let button = self.createNavigationButton(with: buttonTitle)
         stackView.addArrangedSubview(button)
+        button.addTarget(self, action: action, for: .touchUpInside)
 
         // Center the stack view in the view using constraints
         stackView.centerInSuperviewConstraints()
@@ -80,4 +80,13 @@ class LoginSignUpFlowViewController: UIViewController {
         // Return the view
         return view
     }
+    
+    func createNavigationButton(with title: String) -> UIButton{
+        let button = UIButton()
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(ColorsManager.accentGreen, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
+        return button
+    }
+
 }
