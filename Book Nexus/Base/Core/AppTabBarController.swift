@@ -15,18 +15,18 @@ class AppTabBarController: UITabBarController {
         
         let homeNavController = UINavigationController(rootViewController: HomeViewController(collectionViewLayout: .init()))
         homeNavController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: nil)
-//        
-//        let exploreNavController = UINavigationController(rootViewController: ExploreViewController(collectionViewLayout: .init()))
-//        exploreNavController.tabBarItem = UITabBarItem(title: "Explore", image: UIImage(systemName: "magnifyingglass"), selectedImage: nil)
-//        
-//        let libraryNavController = UINavigationController(rootViewController: LibraryViewController(collectionViewLayout: .init()))
-//        libraryNavController.tabBarItem = UITabBarItem(title: "Library", image: UIImage(systemName: "magazine"), selectedImage: nil)
-//        
+        
+        let exploreNavController = UINavigationController(rootViewController: ExploreViewController(collectionViewLayout: .init()))
+        exploreNavController.tabBarItem = UITabBarItem(title: "Explore", image: UIImage(systemName: "magnifyingglass"), selectedImage: nil)
+        
+        let libraryNavController = UINavigationController(rootViewController: LibraryViewController(collectionViewLayout: .init()))
+        libraryNavController.tabBarItem = UITabBarItem(title: "Library", image: UIImage(systemName: "magazine"), selectedImage: nil)
+        
         tabBar.tintColor = .white
         tabBar.backgroundColor = .black
         tabBar.barTintColor = .white
 //        
-        viewControllers = [homeNavController] //, exploreNavController, libraryNavController]
+        viewControllers = [homeNavController, exploreNavController, libraryNavController]
 //
     }
     

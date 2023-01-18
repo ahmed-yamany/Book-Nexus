@@ -31,6 +31,8 @@
 		738542AE29787F7500176F5B /* StoriesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542AD29787F7500176F5B /* StoriesSection.swift */; };
 		738542B129787F8800176F5B /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542B029787F8800176F5B /* StoryCell.swift */; };
 		738542B429787F9100176F5B /* CollectionViewSectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542B329787F9100176F5B /* CollectionViewSectionDelegate.swift */; };
+		738542B92978801E00176F5B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542B62978801E00176F5B /* ExploreViewController.swift */; };
+		738542BA2978801E00176F5B /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542B82978801E00176F5B /* LibraryViewController.swift */; };
 		73F08FC62966F76400E41566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC52966F76400E41566 /* AppDelegate.swift */; };
 		73F08FC82966F76400E41566 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC72966F76400E41566 /* SceneDelegate.swift */; };
 		73F08FCF2966F76400E41566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F08FCE2966F76400E41566 /* Assets.xcassets */; };
@@ -90,6 +92,8 @@
 		738542AD29787F7500176F5B /* StoriesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesSection.swift; sourceTree = "<group>"; };
 		738542B029787F8800176F5B /* StoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		738542B329787F9100176F5B /* CollectionViewSectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionDelegate.swift; sourceTree = "<group>"; };
+		738542B62978801E00176F5B /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		738542B82978801E00176F5B /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		73F08FC22966F76400E41566 /* Book Nexus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Nexus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F08FC52966F76400E41566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F08FC72966F76400E41566 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -258,6 +262,22 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		738542B52978801E00176F5B /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				738542B62978801E00176F5B /* ExploreViewController.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		738542B72978801E00176F5B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				738542B82978801E00176F5B /* LibraryViewController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		73F08FB92966F76400E41566 = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +377,8 @@
 			children = (
 				7385428629787E4600176F5B /* Login&SignupFlow */,
 				7385427B29787CF100176F5B /* Core */,
+				738542B52978801E00176F5B /* Explore */,
+				738542B72978801E00176F5B /* Library */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -497,6 +519,7 @@
 				738542AB29787E5F00176F5B /* UICollectionViewCell+identifer.swift in Sources */,
 				738542A829787E4600176F5B /* LoginPasswordViewController.swift in Sources */,
 				7385429B29787E4600176F5B /* FormTextField.swift in Sources */,
+				738542BA2978801E00176F5B /* LibraryViewController.swift in Sources */,
 				7385428229787DA500176F5B /* GoodAfterNoonView.swift in Sources */,
 				73F0900429672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift in Sources */,
 				738542A029787E4600176F5B /* LoginSignUpFlowViewController.swift in Sources */,
@@ -513,6 +536,7 @@
 				7385428529787DBE00176F5B /* CircledImageView.swift in Sources */,
 				7385429E29787E4600176F5B /* AccentGreenButton.swift in Sources */,
 				73F090012967145D00E41566 /* UIView+MakeConstraints.swift in Sources */,
+				738542B92978801E00176F5B /* ExploreViewController.swift in Sources */,
 				7385429A29787E4600176F5B /* SignUpViewController.swift in Sources */,
 				738542A229787E4600176F5B /* GeneryCell.swift in Sources */,
 				738542A129787E4600176F5B /* SocialMediaButton.swift in Sources */,
