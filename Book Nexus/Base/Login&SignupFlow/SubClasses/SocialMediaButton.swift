@@ -7,8 +7,8 @@
 
 import UIKit
 
-class SocialMediaButton: UIButton{
-    init(_ title: String, with image: UIImage?){
+class SocialMediaButton: UIButton {
+    init(_ title: String, with image: UIImage?) {
         super.init(frame: .zero)
         
         backgroundColor = .white
@@ -21,7 +21,7 @@ class SocialMediaButton: UIButton{
         addSubview(imageView)
         
         // Constrain the image view to be centered on the y-axis of the button and have a leading edge 20 points from the leading edge of the button
-        imageView.centerYInSuperviewConstraints()
+        imageView.centerYInSuperview()
         imageView.makeConstraints(leadingAnchor: leadingAnchor, padding: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0))
     }
     

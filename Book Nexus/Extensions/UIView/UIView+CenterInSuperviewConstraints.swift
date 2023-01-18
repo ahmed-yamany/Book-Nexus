@@ -7,12 +7,14 @@
 
 import UIKit
 
-extension UIView{
-    func centerInSuperviewConstraints(_ size: CGSize = .zero) {
+extension UIView {
+    func centerInSuperview(size: CGSize = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
-        self.centerXInSuperviewConstraints()
-        self.centerYInSuperviewConstraints()
-       
+        if let superview = superview {
+            centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
+            centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
+        }
+        
         if size.width != 0 {
             widthAnchor.constraint(equalToConstant: size.width).isActive = true
         }
@@ -22,19 +24,19 @@ extension UIView{
         }
     }
     
-    func centerXInSuperviewConstraints() {
+    func centerXInSuperview() {
         translatesAutoresizingMaskIntoConstraints = false
-        if let superViewCenterXAnchor = superview?.centerXAnchor {
-            centerXAnchor.constraint(equalTo: superViewCenterXAnchor).isActive = true
+        if let superview = superview {
+            centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
+            
         }
     }
-    func centerYInSuperviewConstraints() {
+    func centerYInSuperview() {
+        translatesAutoresizingMaskIntoConstraints = false
+         if let superview = superview {
+             centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
+         }
         
-        translatesAutoresizingMaskIntoConstraints = false
-        if let centerY = superview?.centerYAnchor {
-            centerYAnchor.constraint(equalTo: centerY).isActive = true
-        }
     }
-
 
 }

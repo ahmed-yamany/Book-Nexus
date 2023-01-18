@@ -7,17 +7,17 @@
 
 import UIKit
 
-class AccentGreenButton: UIButton{
-    init(_ title: String){
+class AccentGreenButton: UIButton {
+    // MARK: - Initialization
+    init(title: String) {
         super.init(frame: .zero)
         setTitle(title, for: .normal)
         setTitleColor(ColorsManager.accentBlack, for: .normal)
         backgroundColor = ColorsManager.accentGreen
         titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
-        
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
     }
 }

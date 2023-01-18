@@ -7,17 +7,9 @@
 
 import UIKit
 
-
 class UserDetailView: UIView {
     // MARK: - Properties
-    let imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 30
-        imageView.equalSizeConstraints(60)
-        return imageView
-    }()
+    let imageView = CircledImageView(image: nil, width: 60)
 
     let nameLabel: UILabel = {
         let label = UILabel()
@@ -62,15 +54,15 @@ class UserDetailView: UIView {
         verticalStackView.addArrangedSubview(emailLabel)
                 
         // Center the image view vertically in the superview
-        imageView.centerYInSuperviewConstraints()
+        imageView.centerYInSuperview()
         
         // Center the stack view vertically in the superview
-        verticalStackView.centerYInSuperviewConstraints()
+        verticalStackView.centerYInSuperview()
         // Set the stack view's leading anchor to the image view's trailing anchor and add a 16 point padding
         verticalStackView.makeConstraints(leadingAnchor: imageView.trailingAnchor, padding: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0))
         
         // Center the checked image vertically in the superview
-        checkmarkImage.centerYInSuperviewConstraints()
+        checkmarkImage.centerYInSuperview()
         
         // Set the checked image's leading anchor to the superview's trailing anchor and add a -16 point padding
         checkmarkImage.makeConstraints(leadingAnchor: trailingAnchor, padding: UIEdgeInsets(top: 0, left: -16, bottom: 0, right: 0))
@@ -81,4 +73,3 @@ class UserDetailView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-

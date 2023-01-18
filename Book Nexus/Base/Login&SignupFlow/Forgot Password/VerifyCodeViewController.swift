@@ -19,7 +19,7 @@ class VerifyCodeViewController: LoginSignUpFlowViewController {
         return label
     }()
     let codeTextField = FormTextField("Enter Code")
-    let verifyButton = AccentGreenButton("Verify")
+    let verifyButton = AccentGreenButton(title: "Verify")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,15 +30,14 @@ class VerifyCodeViewController: LoginSignUpFlowViewController {
         stackView.addArrangedSubviews([descriptionLabel, codeTextField, verifyButton, resendView])
         stackView.updateArrangedSubviewsLayout()
         
-        
         verifyButton.addTarget(self, action: #selector(self.verifyButtonPressed), for: .touchUpInside)
     }
     
-    @objc func verifyButtonPressed(){
+    @objc func verifyButtonPressed() {
         navigationController?.pushViewController(SetPasswordViewController(), animated: true)
     }
     
-    @objc func resendButtonPressed(){
+    @objc func resendButtonPressed() {
         navigationController?.pushViewController(SetPasswordViewController(), animated: true)
     }
     

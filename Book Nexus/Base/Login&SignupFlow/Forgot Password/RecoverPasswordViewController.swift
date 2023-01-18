@@ -18,7 +18,7 @@ class RecoverPasswordViewController: LoginSignUpFlowViewController {
           return label
     }()
     private let emailTextField = FormTextField("Email")
-    private let sumbiteButton = AccentGreenButton("Submit")
+    private let sumbiteButton = AccentGreenButton(title: "Submit")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,19 +33,17 @@ class RecoverPasswordViewController: LoginSignUpFlowViewController {
         stackView.addArrangedSubviews([overviewLabel, emailTextField, sumbiteButton, signupView])
         stackView.updateArrangedSubviewsLayout()
         
-        
         sumbiteButton.addTarget(self, action: #selector(self.submitButtonTapped), for: .touchUpInside)
     }
     
-    @objc func submitButtonTapped(){
+    @objc func submitButtonTapped() {
         navigationController?.pushViewController(VerifyCodeViewController(), animated: true)
     }
     
-    @objc func signupButtonTapped(){
+    @objc func signupButtonTapped() {
         navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
 }
-
 
 struct RecoverPasswordView: UIViewControllerRepresentable {
     

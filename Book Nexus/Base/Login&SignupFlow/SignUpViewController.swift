@@ -22,35 +22,34 @@ class SignUpViewController: LoginSignUpFlowViewController {
     let emailTextField = FormTextField("Email")
     let passwordTextField = FormTextField("password")
 
-    let createAccountButton = AccentGreenButton("Create Account")
+    let createAccountButton = AccentGreenButton(title: "Create Account")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.titleLabel.text = "Sign up"
         
+        let termsAndConditionsView = createNavigationView(labelText: "By selecting Create Account below, I agree to",
+                                                          buttonTitle: "Terms of Service & Privacy Policy", axis: .vertical,
+                                                          action: #selector(self.termsConditionButtonTapped))
         
-        let termsAndConditionsView = createNavigationView(labelText: "By selecting Create Account below, I agree to", buttonTitle: "Terms of Service & Privacy Policy", axis: .vertical, action: #selector(self.termsConditionButtonTapped))
+        let haveAccountView = createNavigationView(labelText: "Already have an account?", buttonTitle: "Log in",
+                                                   action: #selector(self.loginButtonTapped))
 
-        // Create the navigation view
-        let haveAccountView = createNavigationView(labelText: "Already have an account?", buttonTitle: "Log in", action: #selector(self.loginButtonTapped))
-
-        
-        stackView.addArrangedSubviews([descriptionLabel, nameTextField, emailTextField, passwordTextField, termsAndConditionsView, createAccountButton, haveAccountView])
+        stackView.addArrangedSubviews([descriptionLabel, nameTextField, emailTextField,
+                                       passwordTextField, termsAndConditionsView,
+                                       createAccountButton, haveAccountView])
         stackView.updateArrangedSubviewsLayout()
 
     }
     
-    @objc private func termsConditionButtonTapped(){
+    @objc private func termsConditionButtonTapped() {
         
     }
-    @objc private func loginButtonTapped(){
+    @objc private func loginButtonTapped() {
         
     }
     
-
-
 }
-
 
 struct SignUpView: UIViewControllerRepresentable {
     

@@ -7,21 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		730041E42968184E0051B588 /* LoginSignUpFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041E32968184E0051B588 /* LoginSignUpFlowViewController.swift */; };
-		730041E729681B360051B588 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041E629681B360051B588 /* VerticalStackView.swift */; };
-		730041E929681EF50051B588 /* AccentGreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041E829681EF50051B588 /* AccentGreenButton.swift */; };
 		730041EC2968210A0051B588 /* UITextField+SetPaddingPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */; };
-		730041EE2968221A0051B588 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041ED2968221A0051B588 /* FormTextField.swift */; };
-		730E8501296845E800FB9D0C /* SocialMediaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E8500296845E800FB9D0C /* SocialMediaButton.swift */; };
-		737B6D75296881D60076648A /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B6D74296881D60076648A /* RecoverPasswordViewController.swift */; };
-		73BAE35A2969E45A00565FF8 /* LoginPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BAE3592969E45A00565FF8 /* LoginPasswordViewController.swift */; };
-		73BAE35C2969EE6F00565FF8 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BAE35B2969EE6F00565FF8 /* UserDetailView.swift */; };
-		73BAE35E2969F86500565FF8 /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BAE35D2969F86500565FF8 /* VerifyCodeViewController.swift */; };
-		73BAE3622969FF6900565FF8 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BAE3612969FF6900565FF8 /* SetPasswordViewController.swift */; };
-		73BAE364296A05C400565FF8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BAE363296A05C400565FF8 /* SignUpViewController.swift */; };
+		7385427D29787D2300176F5B /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385427C29787D2300176F5B /* AppTabBarController.swift */; };
+		7385428029787D6800176F5B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385427F29787D6800176F5B /* HomeViewController.swift */; };
+		7385428229787DA500176F5B /* GoodAfterNoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428129787DA500176F5B /* GoodAfterNoonView.swift */; };
+		7385428529787DBE00176F5B /* CircledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428429787DBE00176F5B /* CircledImageView.swift */; };
+		7385429A29787E4600176F5B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428729787E4600176F5B /* SignUpViewController.swift */; };
+		7385429B29787E4600176F5B /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428929787E4600176F5B /* FormTextField.swift */; };
+		7385429C29787E4600176F5B /* BlueredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428A29787E4600176F5B /* BlueredView.swift */; };
+		7385429D29787E4600176F5B /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428B29787E4600176F5B /* UserDetailView.swift */; };
+		7385429E29787E4600176F5B /* AccentGreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428C29787E4600176F5B /* AccentGreenButton.swift */; };
+		7385429F29787E4600176F5B /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428D29787E4600176F5B /* VerticalStackView.swift */; };
+		738542A029787E4600176F5B /* LoginSignUpFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428E29787E4600176F5B /* LoginSignUpFlowViewController.swift */; };
+		738542A129787E4600176F5B /* SocialMediaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428F29787E4600176F5B /* SocialMediaButton.swift */; };
+		738542A229787E4600176F5B /* GeneryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385429129787E4600176F5B /* GeneryCell.swift */; };
+		738542A329787E4600176F5B /* SelectGeneresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385429229787E4600176F5B /* SelectGeneresViewController.swift */; };
+		738542A429787E4600176F5B /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385429429787E4600176F5B /* RecoverPasswordViewController.swift */; };
+		738542A529787E4600176F5B /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385429529787E4600176F5B /* VerifyCodeViewController.swift */; };
+		738542A629787E4600176F5B /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385429629787E4600176F5B /* SetPasswordViewController.swift */; };
+		738542A729787E4600176F5B /* LoginEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385429829787E4600176F5B /* LoginEmailViewController.swift */; };
+		738542A829787E4600176F5B /* LoginPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385429929787E4600176F5B /* LoginPasswordViewController.swift */; };
+		738542AB29787E5F00176F5B /* UICollectionViewCell+identifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542AA29787E5F00176F5B /* UICollectionViewCell+identifer.swift */; };
+		738542AE29787F7500176F5B /* StoriesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542AD29787F7500176F5B /* StoriesSection.swift */; };
+		738542B129787F8800176F5B /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542B029787F8800176F5B /* StoryCell.swift */; };
+		738542B429787F9100176F5B /* CollectionViewSectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542B329787F9100176F5B /* CollectionViewSectionDelegate.swift */; };
 		73F08FC62966F76400E41566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC52966F76400E41566 /* AppDelegate.swift */; };
 		73F08FC82966F76400E41566 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC72966F76400E41566 /* SceneDelegate.swift */; };
-		73F08FCA2966F76400E41566 /* LoginEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC92966F76400E41566 /* LoginEmailViewController.swift */; };
 		73F08FCF2966F76400E41566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F08FCE2966F76400E41566 /* Assets.xcassets */; };
 		73F08FD22966F76400E41566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F08FD02966F76400E41566 /* LaunchScreen.storyboard */; };
 		73F08FDD2966F76500E41566 /* Book_NexusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FDC2966F76500E41566 /* Book_NexusTests.swift */; };
@@ -35,7 +46,6 @@
 		73F0900429672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0900329672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift */; };
 		73F0900629672BC800E41566 /* UIView+SizeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0900529672BC800E41566 /* UIView+SizeConstraints.swift */; };
 		73F0900829672C4C00E41566 /* UIView+FillSuperviewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0900729672C4C00E41566 /* UIView+FillSuperviewConstraints.swift */; };
-		73F0900D296745D900E41566 /* BlueredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0900C296745D900E41566 /* BlueredView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,22 +66,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		730041E32968184E0051B588 /* LoginSignUpFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpFlowViewController.swift; sourceTree = "<group>"; };
-		730041E629681B360051B588 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
-		730041E829681EF50051B588 /* AccentGreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentGreenButton.swift; sourceTree = "<group>"; };
 		730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SetPaddingPoints.swift"; sourceTree = "<group>"; };
-		730041ED2968221A0051B588 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
-		730E8500296845E800FB9D0C /* SocialMediaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaButton.swift; sourceTree = "<group>"; };
-		737B6D74296881D60076648A /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
-		73BAE3592969E45A00565FF8 /* LoginPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordViewController.swift; sourceTree = "<group>"; };
-		73BAE35B2969EE6F00565FF8 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
-		73BAE35D2969F86500565FF8 /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
-		73BAE3612969FF6900565FF8 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
-		73BAE363296A05C400565FF8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7385427C29787D2300176F5B /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
+		7385427F29787D6800176F5B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7385428129787DA500176F5B /* GoodAfterNoonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodAfterNoonView.swift; sourceTree = "<group>"; };
+		7385428429787DBE00176F5B /* CircledImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircledImageView.swift; sourceTree = "<group>"; };
+		7385428729787E4600176F5B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7385428929787E4600176F5B /* FormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		7385428A29787E4600176F5B /* BlueredView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueredView.swift; sourceTree = "<group>"; };
+		7385428B29787E4600176F5B /* UserDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		7385428C29787E4600176F5B /* AccentGreenButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccentGreenButton.swift; sourceTree = "<group>"; };
+		7385428D29787E4600176F5B /* VerticalStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
+		7385428E29787E4600176F5B /* LoginSignUpFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignUpFlowViewController.swift; sourceTree = "<group>"; };
+		7385428F29787E4600176F5B /* SocialMediaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaButton.swift; sourceTree = "<group>"; };
+		7385429129787E4600176F5B /* GeneryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneryCell.swift; sourceTree = "<group>"; };
+		7385429229787E4600176F5B /* SelectGeneresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectGeneresViewController.swift; sourceTree = "<group>"; };
+		7385429429787E4600176F5B /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		7385429529787E4600176F5B /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
+		7385429629787E4600176F5B /* SetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
+		7385429829787E4600176F5B /* LoginEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailViewController.swift; sourceTree = "<group>"; };
+		7385429929787E4600176F5B /* LoginPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPasswordViewController.swift; sourceTree = "<group>"; };
+		738542AA29787E5F00176F5B /* UICollectionViewCell+identifer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+identifer.swift"; sourceTree = "<group>"; };
+		738542AD29787F7500176F5B /* StoriesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesSection.swift; sourceTree = "<group>"; };
+		738542B029787F8800176F5B /* StoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
+		738542B329787F9100176F5B /* CollectionViewSectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionDelegate.swift; sourceTree = "<group>"; };
 		73F08FC22966F76400E41566 /* Book Nexus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Nexus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F08FC52966F76400E41566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F08FC72966F76400E41566 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		73F08FC92966F76400E41566 /* LoginEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailViewController.swift; sourceTree = "<group>"; };
 		73F08FCE2966F76400E41566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73F08FD12966F76400E41566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73F08FD32966F76400E41566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,7 +109,6 @@
 		73F0900329672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CenterInSuperviewConstraints.swift"; sourceTree = "<group>"; };
 		73F0900529672BC800E41566 /* UIView+SizeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SizeConstraints.swift"; sourceTree = "<group>"; };
 		73F0900729672C4C00E41566 /* UIView+FillSuperviewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FillSuperviewConstraints.swift"; sourceTree = "<group>"; };
-		73F0900C296745D900E41566 /* BlueredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueredView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,23 +144,118 @@
 			path = UITextFileld;
 			sourceTree = "<group>";
 		};
-		73BAE35F2969FF2200565FF8 /* Login */ = {
+		7385427B29787CF100176F5B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				73F08FC92966F76400E41566 /* LoginEmailViewController.swift */,
-				73BAE3592969E45A00565FF8 /* LoginPasswordViewController.swift */,
+				7385427C29787D2300176F5B /* AppTabBarController.swift */,
+				7385427E29787D4400176F5B /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7385427E29787D4400176F5B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				738542AF29787F8800176F5B /* Cells */,
+				738542AC29787F7500176F5B /* SectionLayout */,
+				7385427F29787D6800176F5B /* HomeViewController.swift */,
+				7385428129787DA500176F5B /* GoodAfterNoonView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7385428329787DBE00176F5B /* SubClass */ = {
+			isa = PBXGroup;
+			children = (
+				7385428429787DBE00176F5B /* CircledImageView.swift */,
+			);
+			path = SubClass;
+			sourceTree = "<group>";
+		};
+		7385428629787E4600176F5B /* Login&SignupFlow */ = {
+			isa = PBXGroup;
+			children = (
+				7385428729787E4600176F5B /* SignUpViewController.swift */,
+				7385428829787E4600176F5B /* SubClasses */,
+				7385429029787E4600176F5B /* SelcetGeneres */,
+				7385429329787E4600176F5B /* Forgot Password */,
+				7385429729787E4600176F5B /* Login */,
+			);
+			path = "Login&SignupFlow";
+			sourceTree = "<group>";
+		};
+		7385428829787E4600176F5B /* SubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				7385428929787E4600176F5B /* FormTextField.swift */,
+				7385428A29787E4600176F5B /* BlueredView.swift */,
+				7385428B29787E4600176F5B /* UserDetailView.swift */,
+				7385428C29787E4600176F5B /* AccentGreenButton.swift */,
+				7385428D29787E4600176F5B /* VerticalStackView.swift */,
+				7385428E29787E4600176F5B /* LoginSignUpFlowViewController.swift */,
+				7385428F29787E4600176F5B /* SocialMediaButton.swift */,
+			);
+			path = SubClasses;
+			sourceTree = "<group>";
+		};
+		7385429029787E4600176F5B /* SelcetGeneres */ = {
+			isa = PBXGroup;
+			children = (
+				7385429129787E4600176F5B /* GeneryCell.swift */,
+				7385429229787E4600176F5B /* SelectGeneresViewController.swift */,
+			);
+			path = SelcetGeneres;
+			sourceTree = "<group>";
+		};
+		7385429329787E4600176F5B /* Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				7385429429787E4600176F5B /* RecoverPasswordViewController.swift */,
+				7385429529787E4600176F5B /* VerifyCodeViewController.swift */,
+				7385429629787E4600176F5B /* SetPasswordViewController.swift */,
+			);
+			path = "Forgot Password";
+			sourceTree = "<group>";
+		};
+		7385429729787E4600176F5B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7385429829787E4600176F5B /* LoginEmailViewController.swift */,
+				7385429929787E4600176F5B /* LoginPasswordViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
 		};
-		73BAE3602969FF3400565FF8 /* Forgot Password */ = {
+		738542A929787E5F00176F5B /* UICollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				737B6D74296881D60076648A /* RecoverPasswordViewController.swift */,
-				73BAE35D2969F86500565FF8 /* VerifyCodeViewController.swift */,
-				73BAE3612969FF6900565FF8 /* SetPasswordViewController.swift */,
+				738542AA29787E5F00176F5B /* UICollectionViewCell+identifer.swift */,
 			);
-			path = "Forgot Password";
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		738542AC29787F7500176F5B /* SectionLayout */ = {
+			isa = PBXGroup;
+			children = (
+				738542AD29787F7500176F5B /* StoriesSection.swift */,
+			);
+			path = SectionLayout;
+			sourceTree = "<group>";
+		};
+		738542AF29787F8800176F5B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				738542B029787F8800176F5B /* StoryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		738542B229787F9100176F5B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				738542B329787F9100176F5B /* CollectionViewSectionDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		73F08FB92966F76400E41566 = {
@@ -169,7 +284,9 @@
 				73F08FF92966F9F900E41566 /* Resources */,
 				73F08FFA2966FDDE00E41566 /* Manager */,
 				73F08FFF2967144500E41566 /* Extensions */,
-				73F090092967446500E41566 /* Core */,
+				7385428329787DBE00176F5B /* SubClass */,
+				738542B229787F9100176F5B /* Delegate */,
+				73F090092967446500E41566 /* Base */,
 				73F08FD02966F76400E41566 /* LaunchScreen.storyboard */,
 				73F08FD32966F76400E41566 /* Info.plist */,
 				73F08FF52966F96700E41566 /* README.md */,
@@ -217,6 +334,7 @@
 		73F08FFF2967144500E41566 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				738542A929787E5F00176F5B /* UICollectionViewCell */,
 				73F090022967146700E41566 /* UIView */,
 				730041EA296820DF0051B588 /* UITextFileld */,
 			);
@@ -234,37 +352,13 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
-		73F090092967446500E41566 /* Core */ = {
+		73F090092967446500E41566 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				73F0900A2967447C00E41566 /* Login&SignupFlow */,
+				7385428629787E4600176F5B /* Login&SignupFlow */,
+				7385427B29787CF100176F5B /* Core */,
 			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		73F0900A2967447C00E41566 /* Login&SignupFlow */ = {
-			isa = PBXGroup;
-			children = (
-				73F0900B2967458100E41566 /* SubClasses */,
-				73BAE35F2969FF2200565FF8 /* Login */,
-				73BAE3602969FF3400565FF8 /* Forgot Password */,
-				73BAE363296A05C400565FF8 /* SignUpViewController.swift */,
-			);
-			path = "Login&SignupFlow";
-			sourceTree = "<group>";
-		};
-		73F0900B2967458100E41566 /* SubClasses */ = {
-			isa = PBXGroup;
-			children = (
-				730041E32968184E0051B588 /* LoginSignUpFlowViewController.swift */,
-				730041E629681B360051B588 /* VerticalStackView.swift */,
-				730041E829681EF50051B588 /* AccentGreenButton.swift */,
-				73F0900C296745D900E41566 /* BlueredView.swift */,
-				730041ED2968221A0051B588 /* FormTextField.swift */,
-				730E8500296845E800FB9D0C /* SocialMediaButton.swift */,
-				73BAE35B2969EE6F00565FF8 /* UserDetailView.swift */,
-			);
-			path = SubClasses;
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,28 +493,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73BAE364296A05C400565FF8 /* SignUpViewController.swift in Sources */,
-				73BAE35C2969EE6F00565FF8 /* UserDetailView.swift in Sources */,
-				73F08FCA2966F76400E41566 /* LoginEmailViewController.swift in Sources */,
-				73BAE35A2969E45A00565FF8 /* LoginPasswordViewController.swift in Sources */,
-				730041EE2968221A0051B588 /* FormTextField.swift in Sources */,
-				730041E729681B360051B588 /* VerticalStackView.swift in Sources */,
+				7385427D29787D2300176F5B /* AppTabBarController.swift in Sources */,
+				738542AB29787E5F00176F5B /* UICollectionViewCell+identifer.swift in Sources */,
+				738542A829787E4600176F5B /* LoginPasswordViewController.swift in Sources */,
+				7385429B29787E4600176F5B /* FormTextField.swift in Sources */,
+				7385428229787DA500176F5B /* GoodAfterNoonView.swift in Sources */,
 				73F0900429672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift in Sources */,
+				738542A029787E4600176F5B /* LoginSignUpFlowViewController.swift in Sources */,
+				7385429D29787E4600176F5B /* UserDetailView.swift in Sources */,
+				738542B129787F8800176F5B /* StoryCell.swift in Sources */,
+				738542A429787E4600176F5B /* RecoverPasswordViewController.swift in Sources */,
+				738542A329787E4600176F5B /* SelectGeneresViewController.swift in Sources */,
 				73F08FFE29670B8200E41566 /* ImagesManager.swift in Sources */,
 				73F08FFC2966FE0F00E41566 /* ColorsManager.swift in Sources */,
-				730041E929681EF50051B588 /* AccentGreenButton.swift in Sources */,
+				7385428029787D6800176F5B /* HomeViewController.swift in Sources */,
+				738542A529787E4600176F5B /* VerifyCodeViewController.swift in Sources */,
+				738542A629787E4600176F5B /* SetPasswordViewController.swift in Sources */,
+				738542AE29787F7500176F5B /* StoriesSection.swift in Sources */,
+				7385428529787DBE00176F5B /* CircledImageView.swift in Sources */,
+				7385429E29787E4600176F5B /* AccentGreenButton.swift in Sources */,
 				73F090012967145D00E41566 /* UIView+MakeConstraints.swift in Sources */,
+				7385429A29787E4600176F5B /* SignUpViewController.swift in Sources */,
+				738542A229787E4600176F5B /* GeneryCell.swift in Sources */,
+				738542A129787E4600176F5B /* SocialMediaButton.swift in Sources */,
+				7385429F29787E4600176F5B /* VerticalStackView.swift in Sources */,
+				7385429C29787E4600176F5B /* BlueredView.swift in Sources */,
 				730041EC2968210A0051B588 /* UITextField+SetPaddingPoints.swift in Sources */,
-				730E8501296845E800FB9D0C /* SocialMediaButton.swift in Sources */,
-				737B6D75296881D60076648A /* RecoverPasswordViewController.swift in Sources */,
 				73F08FC62966F76400E41566 /* AppDelegate.swift in Sources */,
-				730041E42968184E0051B588 /* LoginSignUpFlowViewController.swift in Sources */,
 				73F0900629672BC800E41566 /* UIView+SizeConstraints.swift in Sources */,
-				73BAE35E2969F86500565FF8 /* VerifyCodeViewController.swift in Sources */,
+				738542A729787E4600176F5B /* LoginEmailViewController.swift in Sources */,
+				738542B429787F9100176F5B /* CollectionViewSectionDelegate.swift in Sources */,
 				73F08FC82966F76400E41566 /* SceneDelegate.swift in Sources */,
-				73F0900D296745D900E41566 /* BlueredView.swift in Sources */,
 				73F0900829672C4C00E41566 /* UIView+FillSuperviewConstraints.swift in Sources */,
-				73BAE3622969FF6900565FF8 /* SetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

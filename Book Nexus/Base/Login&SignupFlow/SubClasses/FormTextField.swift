@@ -7,8 +7,8 @@
 
 import UIKit
 
-class FormTextField: UITextField{
-    init(_ placeholder: String){
+class FormTextField: UITextField {
+    init(_ placeholder: String) {
         super.init(frame: .zero)
         self.placeholder = placeholder
         self.backgroundColor = .white

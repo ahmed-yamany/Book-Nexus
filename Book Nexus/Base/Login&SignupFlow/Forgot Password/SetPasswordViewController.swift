@@ -24,7 +24,6 @@ class SetPasswordViewController: LoginSignUpFlowViewController {
         label.text = "Code verified"
         label.textColor = .white
         
-        
         stackView.addArrangedSubview(imageView)
         stackView.addArrangedSubview(label)
         return stackView
@@ -39,14 +38,12 @@ class SetPasswordViewController: LoginSignUpFlowViewController {
         label.font = .systemFont(ofSize: 12)
         return label
     }()
-    let setPasswordButton = AccentGreenButton("Set Password")
-
+    let setPasswordButton = AccentGreenButton(title: "Set Password")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.titleLabel.text = "Set Password"
 
-        
         stackView.addArrangedSubviews([codeVerifiedStackView, passwordTextField, rePasswordTextField, passwordDescriptiveLabel, setPasswordButton])
         stackView.updateArrangedSubviewsLayout(ignoring: [codeVerifiedStackView, passwordDescriptiveLabel])
         passwordDescriptiveLabel.heightConstraints(10)
@@ -54,7 +51,6 @@ class SetPasswordViewController: LoginSignUpFlowViewController {
     }
     
 }
-
 
 struct SetPasswordView: UIViewControllerRepresentable {
     
