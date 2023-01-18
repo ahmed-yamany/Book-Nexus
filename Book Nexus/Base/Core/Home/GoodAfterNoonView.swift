@@ -13,12 +13,12 @@ final class GoodAfterNoonView: UIView {
          
          let goodLabel = UILabel()
          goodLabel.text = "Good"
-         goodLabel.textColor = .white
+         goodLabel.textColor = ColorsManager.textColor
          goodLabel.font = .systemFont(ofSize: 26, weight: .bold)
          
          let afternoonLabel = UILabel()
          afternoonLabel.text = "Afternoon"
-         afternoonLabel.textColor = .white
+         afternoonLabel.textColor = ColorsManager.textColor
          afternoonLabel.font = .systemFont(ofSize: 26, weight: .bold)
          
          widthConstraints(200)

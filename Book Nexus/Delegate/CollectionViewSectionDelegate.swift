@@ -10,14 +10,16 @@ import UIKit
 protocol CollectionViewSectionDelegate: AnyObject {
     associatedtype Response
     var items: [Response] {get set}
+    var itemsCount: Int {get set}
+
     var title: String? {get set}
     
     var itemSize: NSCollectionLayoutSize {get set}
     var groupSize: NSCollectionLayoutSize {get set}
     
-    func item() -> NSCollectionLayoutItem
-    func group() -> NSCollectionLayoutGroup
-    func Layout() -> NSCollectionLayoutSection
+    func itemLayout() -> NSCollectionLayoutItem
+    func groupLayout() -> NSCollectionLayoutGroup
+    func sectionLayout() -> NSCollectionLayoutSection
     
     func cellForItem(collectionView: UICollectionView, at indexpath: IndexPath) -> UICollectionViewCell
 }

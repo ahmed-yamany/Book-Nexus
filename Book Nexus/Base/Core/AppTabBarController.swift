@@ -22,9 +22,9 @@ class AppTabBarController: UITabBarController {
         let libraryNavController = UINavigationController(rootViewController: LibraryViewController(collectionViewLayout: .init()))
         libraryNavController.tabBarItem = UITabBarItem(title: "Library", image: UIImage(systemName: "magazine"), selectedImage: nil)
         
-        tabBar.tintColor = .white
-        tabBar.backgroundColor = .black
-        tabBar.barTintColor = .white
+        tabBar.tintColor = ColorsManager.textColor
+        tabBar.backgroundColor = ColorsManager.backgroudColor
+        tabBar.barTintColor = ColorsManager.textColor
 //        
         viewControllers = [homeNavController, exploreNavController, libraryNavController]
 //
@@ -32,21 +32,21 @@ class AppTabBarController: UITabBarController {
     
 }
 
-struct AppTabBarView: UIViewControllerRepresentable {
-    
-    typealias UIViewControllerType = UIViewController
-
-    func makeUIViewController(context: Context) -> UIViewController {
-        return AppTabBarController()
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-    }
-}
-
-struct AppTabBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        AppTabBarView()
-            .ignoresSafeArea()
-    }
-}
+//struct AppTabBarView: UIViewControllerRepresentable {
+//    
+//    typealias UIViewControllerType = UIViewController
+//
+//    func makeUIViewController(context: Context) -> UIViewController {
+//        return AppTabBarController()
+//    }
+//    
+//    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+//    }
+//}
+//
+//struct AppTabBarView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AppTabBarView()
+//            .ignoresSafeArea()
+//    }
+//}

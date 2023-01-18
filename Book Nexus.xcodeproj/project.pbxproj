@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		730041EC2968210A0051B588 /* UITextField+SetPaddingPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */; };
+		7307A0002978A732000D83C9 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73079FFF2978A732000D83C9 /* Story.swift */; };
 		7385427D29787D2300176F5B /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385427C29787D2300176F5B /* AppTabBarController.swift */; };
 		7385428029787D6800176F5B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385427F29787D6800176F5B /* HomeViewController.swift */; };
 		7385428229787DA500176F5B /* GoodAfterNoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428129787DA500176F5B /* GoodAfterNoonView.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SetPaddingPoints.swift"; sourceTree = "<group>"; };
+		73079FFF2978A732000D83C9 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		7385427C29787D2300176F5B /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		7385427F29787D6800176F5B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7385428129787DA500176F5B /* GoodAfterNoonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodAfterNoonView.swift; sourceTree = "<group>"; };
@@ -148,11 +150,21 @@
 			path = UITextFileld;
 			sourceTree = "<group>";
 		};
+		73079FFE2978A728000D83C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73079FFF2978A732000D83C9 /* Story.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7385427B29787CF100176F5B /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				7385427C29787D2300176F5B /* AppTabBarController.swift */,
 				7385427E29787D4400176F5B /* Home */,
+				738542B52978801E00176F5B /* Explore */,
+				738542B72978801E00176F5B /* Library */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -160,6 +172,7 @@
 		7385427E29787D4400176F5B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				73079FFE2978A728000D83C9 /* Model */,
 				738542AF29787F8800176F5B /* Cells */,
 				738542AC29787F7500176F5B /* SectionLayout */,
 				7385427F29787D6800176F5B /* HomeViewController.swift */,
@@ -377,8 +390,6 @@
 			children = (
 				7385428629787E4600176F5B /* Login&SignupFlow */,
 				7385427B29787CF100176F5B /* Core */,
-				738542B52978801E00176F5B /* Explore */,
-				738542B72978801E00176F5B /* Library */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -529,6 +540,7 @@
 				738542A329787E4600176F5B /* SelectGeneresViewController.swift in Sources */,
 				73F08FFE29670B8200E41566 /* ImagesManager.swift in Sources */,
 				73F08FFC2966FE0F00E41566 /* ColorsManager.swift in Sources */,
+				7307A0002978A732000D83C9 /* Story.swift in Sources */,
 				7385428029787D6800176F5B /* HomeViewController.swift in Sources */,
 				738542A529787E4600176F5B /* VerifyCodeViewController.swift in Sources */,
 				738542A629787E4600176F5B /* SetPasswordViewController.swift in Sources */,
