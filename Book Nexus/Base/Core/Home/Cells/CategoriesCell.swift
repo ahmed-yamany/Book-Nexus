@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class CategorieCell: UICollectionViewCell {
+class CategoriesCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         clipsToBounds = true
@@ -21,7 +21,7 @@ class CategorieCell: UICollectionViewCell {
     
     
     func setup(with categories: [Category]){
-        let hostingController = UIHostingController(rootView: CategoriesSwiftUIView(categories: categories))
+        let hostingController = UIHostingController(rootView: CategoriesView(categories: categories))
         guard let cell = hostingController.view else { return}
         
         self.contentView.addSubview(cell)

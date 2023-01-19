@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CategoriesSwiftUIView: View {
+struct CategoriesView: View {
     @State var categories: [Category] = [
         Category(name: "Trending", image: "flame"),
         Category(name: "5-Minutes Read", image: "book"),
@@ -20,7 +20,7 @@ struct CategoriesSwiftUIView: View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 5){
                 ForEach(categories, id: \.id) { category in
-                    CategorieSwiftUIView(category: category)
+                    CategoryView(category: category)
                 }
             }
             .padding(10)
@@ -32,6 +32,6 @@ struct CategoriesSwiftUIView: View {
 
 struct CategoriesSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoriesSwiftUIView()
+        CategoriesView()
     }
 }

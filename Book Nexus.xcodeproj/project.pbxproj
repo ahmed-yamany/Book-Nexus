@@ -10,12 +10,12 @@
 		730041EC2968210A0051B588 /* UITextField+SetPaddingPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */; };
 		7307A0002978A732000D83C9 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73079FFF2978A732000D83C9 /* Story.swift */; };
 		737E881C29798047006E79AE /* CategoriesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E881B29798047006E79AE /* CategoriesSection.swift */; };
-		737E881E297986C7006E79AE /* CategorieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E881D297986C7006E79AE /* CategorieCell.swift */; };
+		737E881E297986C7006E79AE /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E881D297986C7006E79AE /* CategoriesCell.swift */; };
 		737E882129798D97006E79AE /* UICollectionView+dequeReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E882029798D97006E79AE /* UICollectionView+dequeReusable.swift */; };
 		737E882329798DF9006E79AE /* UICollectionView+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E882229798DF9006E79AE /* UICollectionView+register.swift */; };
-		737E88252979A90B006E79AE /* CategorieSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E88242979A90B006E79AE /* CategorieSwiftUIView.swift */; };
+		737E88252979A90B006E79AE /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E88242979A90B006E79AE /* CategoryView.swift */; };
 		737E88272979AA24006E79AE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E88262979AA24006E79AE /* Category.swift */; };
-		737E88292979AD08006E79AE /* CategoriesSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E88282979AD08006E79AE /* CategoriesSwiftUIView.swift */; };
+		737E88292979AD08006E79AE /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E88282979AD08006E79AE /* CategoriesView.swift */; };
 		7385427D29787D2300176F5B /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385427C29787D2300176F5B /* AppTabBarController.swift */; };
 		7385428029787D6800176F5B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385427F29787D6800176F5B /* HomeViewController.swift */; };
 		7385428229787DA500176F5B /* GoodAfterNoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428129787DA500176F5B /* GoodAfterNoonView.swift */; };
@@ -41,6 +41,11 @@
 		738542B429787F9100176F5B /* CollectionViewSectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542B329787F9100176F5B /* CollectionViewSectionDelegate.swift */; };
 		738542B92978801E00176F5B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542B62978801E00176F5B /* ExploreViewController.swift */; };
 		738542BA2978801E00176F5B /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738542B82978801E00176F5B /* LibraryViewController.swift */; };
+		73A7AFD62979E3F500CA70ED /* CardSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7AFD52979E3F500CA70ED /* CardSection.swift */; };
+		73A7AFD82979E65A00CA70ED /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7AFD72979E65A00CA70ED /* CartCell.swift */; };
+		73A7AFDA2979ECFD00CA70ED /* BooksSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7AFD92979ECFD00CA70ED /* BooksSection.swift */; };
+		73A7AFDC2979EDED00CA70ED /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7AFDB2979EDED00CA70ED /* Book.swift */; };
+		73A7AFDF2979F4CB00CA70ED /* UIImage+imageWithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A7AFDE2979F4CA00CA70ED /* UIImage+imageWithColor.swift */; };
 		73F08FC62966F76400E41566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC52966F76400E41566 /* AppDelegate.swift */; };
 		73F08FC82966F76400E41566 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08FC72966F76400E41566 /* SceneDelegate.swift */; };
 		73F08FCF2966F76400E41566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F08FCE2966F76400E41566 /* Assets.xcassets */; };
@@ -79,12 +84,12 @@
 		730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SetPaddingPoints.swift"; sourceTree = "<group>"; };
 		73079FFF2978A732000D83C9 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		737E881B29798047006E79AE /* CategoriesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSection.swift; sourceTree = "<group>"; };
-		737E881D297986C7006E79AE /* CategorieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieCell.swift; sourceTree = "<group>"; };
+		737E881D297986C7006E79AE /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		737E882029798D97006E79AE /* UICollectionView+dequeReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+dequeReusable.swift"; sourceTree = "<group>"; };
 		737E882229798DF9006E79AE /* UICollectionView+register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+register.swift"; sourceTree = "<group>"; };
-		737E88242979A90B006E79AE /* CategorieSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieSwiftUIView.swift; sourceTree = "<group>"; };
+		737E88242979A90B006E79AE /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		737E88262979AA24006E79AE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		737E88282979AD08006E79AE /* CategoriesSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSwiftUIView.swift; sourceTree = "<group>"; };
+		737E88282979AD08006E79AE /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		7385427C29787D2300176F5B /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		7385427F29787D6800176F5B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7385428129787DA500176F5B /* GoodAfterNoonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodAfterNoonView.swift; sourceTree = "<group>"; };
@@ -110,6 +115,11 @@
 		738542B329787F9100176F5B /* CollectionViewSectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionDelegate.swift; sourceTree = "<group>"; };
 		738542B62978801E00176F5B /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		738542B82978801E00176F5B /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		73A7AFD52979E3F500CA70ED /* CardSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSection.swift; sourceTree = "<group>"; };
+		73A7AFD72979E65A00CA70ED /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		73A7AFD92979ECFD00CA70ED /* BooksSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksSection.swift; sourceTree = "<group>"; };
+		73A7AFDB2979EDED00CA70ED /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		73A7AFDE2979F4CA00CA70ED /* UIImage+imageWithColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+imageWithColor.swift"; sourceTree = "<group>"; };
 		73F08FC22966F76400E41566 /* Book Nexus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Nexus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F08FC52966F76400E41566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F08FC72966F76400E41566 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +179,7 @@
 			children = (
 				73079FFF2978A732000D83C9 /* Story.swift */,
 				737E88262979AA24006E79AE /* Category.swift */,
+				73A7AFDB2979EDED00CA70ED /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,6 +291,8 @@
 			children = (
 				738542AD29787F7500176F5B /* StoriesSection.swift */,
 				737E881B29798047006E79AE /* CategoriesSection.swift */,
+				73A7AFD52979E3F500CA70ED /* CardSection.swift */,
+				73A7AFD92979ECFD00CA70ED /* BooksSection.swift */,
 			);
 			path = SectionLayout;
 			sourceTree = "<group>";
@@ -288,9 +301,10 @@
 			isa = PBXGroup;
 			children = (
 				738542B029787F8800176F5B /* StoryCell.swift */,
-				737E881D297986C7006E79AE /* CategorieCell.swift */,
-				737E88242979A90B006E79AE /* CategorieSwiftUIView.swift */,
-				737E88282979AD08006E79AE /* CategoriesSwiftUIView.swift */,
+				737E881D297986C7006E79AE /* CategoriesCell.swift */,
+				737E88242979A90B006E79AE /* CategoryView.swift */,
+				737E88282979AD08006E79AE /* CategoriesView.swift */,
+				73A7AFD72979E65A00CA70ED /* CartCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -317,6 +331,14 @@
 				738542B82978801E00176F5B /* LibraryViewController.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		73A7AFDD2979F4AB00CA70ED /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				73A7AFDE2979F4CA00CA70ED /* UIImage+imageWithColor.swift */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 		73F08FB92966F76400E41566 = {
@@ -395,6 +417,7 @@
 		73F08FFF2967144500E41566 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				73A7AFDD2979F4AB00CA70ED /* UIImage */,
 				737E881F29798D3C006E79AE /* UICollectionView */,
 				738542A929787E5F00176F5B /* UICollectionViewCell */,
 				73F090022967146700E41566 /* UIView */,
@@ -563,15 +586,19 @@
 				738542BA2978801E00176F5B /* LibraryViewController.swift in Sources */,
 				7385428229787DA500176F5B /* GoodAfterNoonView.swift in Sources */,
 				73F0900429672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift in Sources */,
-				737E88292979AD08006E79AE /* CategoriesSwiftUIView.swift in Sources */,
-				737E88252979A90B006E79AE /* CategorieSwiftUIView.swift in Sources */,
+				73A7AFDC2979EDED00CA70ED /* Book.swift in Sources */,
+				737E88292979AD08006E79AE /* CategoriesView.swift in Sources */,
+				737E88252979A90B006E79AE /* CategoryView.swift in Sources */,
 				737E88272979AA24006E79AE /* Category.swift in Sources */,
 				738542A029787E4600176F5B /* LoginSignUpFlowViewController.swift in Sources */,
+				73A7AFD62979E3F500CA70ED /* CardSection.swift in Sources */,
 				737E882129798D97006E79AE /* UICollectionView+dequeReusable.swift in Sources */,
 				7385429D29787E4600176F5B /* UserDetailView.swift in Sources */,
-				737E881E297986C7006E79AE /* CategorieCell.swift in Sources */,
+				73A7AFD82979E65A00CA70ED /* CartCell.swift in Sources */,
+				737E881E297986C7006E79AE /* CategoriesCell.swift in Sources */,
 				738542B129787F8800176F5B /* StoryCell.swift in Sources */,
 				738542A429787E4600176F5B /* RecoverPasswordViewController.swift in Sources */,
+				73A7AFDF2979F4CB00CA70ED /* UIImage+imageWithColor.swift in Sources */,
 				738542A329787E4600176F5B /* SelectGeneresViewController.swift in Sources */,
 				73F08FFE29670B8200E41566 /* ImagesManager.swift in Sources */,
 				73F08FFC2966FE0F00E41566 /* ColorsManager.swift in Sources */,
@@ -596,6 +623,7 @@
 				738542A729787E4600176F5B /* LoginEmailViewController.swift in Sources */,
 				738542B429787F9100176F5B /* CollectionViewSectionDelegate.swift in Sources */,
 				73F08FC82966F76400E41566 /* SceneDelegate.swift in Sources */,
+				73A7AFDA2979ECFD00CA70ED /* BooksSection.swift in Sources */,
 				73F0900829672C4C00E41566 /* UIView+FillSuperviewConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

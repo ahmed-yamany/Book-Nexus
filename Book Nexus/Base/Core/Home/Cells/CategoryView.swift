@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CategorieSwiftUIView: View {
+struct CategoryView: View {
     @State var category: Category = Category(name: "Trending", image: "flame")
     @State var forgroudColor = ColorsManager.textColor
     @State var backgroudColor = ColorsManager.backgroudColor
@@ -51,6 +51,6 @@ struct CategorieSwiftUIView: View {
 
 struct CategoriesView_Previews: PreviewProvider {
     static var previews: some View {
-        CategorieSwiftUIView()
+        CategoryView()
     }
 }

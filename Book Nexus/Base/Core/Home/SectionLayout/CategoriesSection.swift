@@ -20,9 +20,9 @@ class CategoriesSection: CollectionViewSectionDelegate{
     
     var title: String? = nil
     
-    var itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(42))
+    var itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
     
-    var groupSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(80))
+    var groupSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(43))
     
     init() {
         itemsCount = 1
@@ -34,7 +34,6 @@ class CategoriesSection: CollectionViewSectionDelegate{
     
     func groupLayout() -> NSCollectionLayoutGroup {
         let group =  NSCollectionLayoutGroup.horizontal(layoutSize: self.groupSize, repeatingSubitem: self.itemLayout(), count: 1)
-        
         return group
         
     }
@@ -42,12 +41,12 @@ class CategoriesSection: CollectionViewSectionDelegate{
     func sectionLayout() -> NSCollectionLayoutSection {
         let section = NSCollectionLayoutSection(group: self.groupLayout())
         section.orthogonalScrollingBehavior = .continuous
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
         return section
     }
     
     func cellForItem(collectionView: UICollectionView, at indexpath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withClass: CategorieCell.self, for: indexpath)
+        let cell = collectionView.dequeueReusableCell(withClass: CategoriesCell.self, for: indexpath)
         cell.setup(with: self.items)
         return cell
     }

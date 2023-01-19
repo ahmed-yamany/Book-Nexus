@@ -25,7 +25,11 @@ class AppTabBarController: UITabBarController {
         tabBar.tintColor = ColorsManager.textColor
         tabBar.backgroundColor = ColorsManager.backgroudColor
         tabBar.barTintColor = ColorsManager.textColor
-       
+        tabBar.barTintColor = .black
+        
+        
+        
+        
         viewControllers = [homeNavController, exploreNavController, libraryNavController]
 
     }

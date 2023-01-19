@@ -13,14 +13,23 @@ class HomeViewController: UICollectionViewController {
     lazy var sections: [any CollectionViewSectionDelegate] = [
         StoriesSection(),
         CategoriesSection(),
+        CardSection(),
+        BooksSection(),
+        BooksSection()
+
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialSetup()
         
+        navigationController?.navigationBar.setBackgroundImage(UIImage.imageWithColor(color: .black), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage.imageWithColor(color: .black)
+        
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.register(cell: StoryCell.self)
-        collectionView.register(cell: CategorieCell.self)
+        collectionView.register(cell: CategoriesCell.self)
+        collectionView.register(cell: CartCell.self)
         collectionView.collectionViewLayout = self.collectionViewLayout()
 
     }
