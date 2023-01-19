@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		730041EC2968210A0051B588 /* UITextField+SetPaddingPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */; };
 		7307A0002978A732000D83C9 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73079FFF2978A732000D83C9 /* Story.swift */; };
+		737E881C29798047006E79AE /* CategoriesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E881B29798047006E79AE /* CategoriesSection.swift */; };
+		737E881E297986C7006E79AE /* CategorieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E881D297986C7006E79AE /* CategorieCell.swift */; };
+		737E882129798D97006E79AE /* UICollectionView+dequeReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E882029798D97006E79AE /* UICollectionView+dequeReusable.swift */; };
+		737E882329798DF9006E79AE /* UICollectionView+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E882229798DF9006E79AE /* UICollectionView+register.swift */; };
+		737E88252979A90B006E79AE /* CategorieSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E88242979A90B006E79AE /* CategorieSwiftUIView.swift */; };
+		737E88272979AA24006E79AE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E88262979AA24006E79AE /* Category.swift */; };
+		737E88292979AD08006E79AE /* CategoriesSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737E88282979AD08006E79AE /* CategoriesSwiftUIView.swift */; };
 		7385427D29787D2300176F5B /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385427C29787D2300176F5B /* AppTabBarController.swift */; };
 		7385428029787D6800176F5B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385427F29787D6800176F5B /* HomeViewController.swift */; };
 		7385428229787DA500176F5B /* GoodAfterNoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385428129787DA500176F5B /* GoodAfterNoonView.swift */; };
@@ -71,6 +78,13 @@
 /* Begin PBXFileReference section */
 		730041EB2968210A0051B588 /* UITextField+SetPaddingPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SetPaddingPoints.swift"; sourceTree = "<group>"; };
 		73079FFF2978A732000D83C9 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		737E881B29798047006E79AE /* CategoriesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSection.swift; sourceTree = "<group>"; };
+		737E881D297986C7006E79AE /* CategorieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieCell.swift; sourceTree = "<group>"; };
+		737E882029798D97006E79AE /* UICollectionView+dequeReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+dequeReusable.swift"; sourceTree = "<group>"; };
+		737E882229798DF9006E79AE /* UICollectionView+register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+register.swift"; sourceTree = "<group>"; };
+		737E88242979A90B006E79AE /* CategorieSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieSwiftUIView.swift; sourceTree = "<group>"; };
+		737E88262979AA24006E79AE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		737E88282979AD08006E79AE /* CategoriesSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSwiftUIView.swift; sourceTree = "<group>"; };
 		7385427C29787D2300176F5B /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 		7385427F29787D6800176F5B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7385428129787DA500176F5B /* GoodAfterNoonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodAfterNoonView.swift; sourceTree = "<group>"; };
@@ -154,8 +168,18 @@
 			isa = PBXGroup;
 			children = (
 				73079FFF2978A732000D83C9 /* Story.swift */,
+				737E88262979AA24006E79AE /* Category.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		737E881F29798D3C006E79AE /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				737E882029798D97006E79AE /* UICollectionView+dequeReusable.swift */,
+				737E882229798DF9006E79AE /* UICollectionView+register.swift */,
+			);
+			path = UICollectionView;
 			sourceTree = "<group>";
 		};
 		7385427B29787CF100176F5B /* Core */ = {
@@ -255,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				738542AD29787F7500176F5B /* StoriesSection.swift */,
+				737E881B29798047006E79AE /* CategoriesSection.swift */,
 			);
 			path = SectionLayout;
 			sourceTree = "<group>";
@@ -263,6 +288,9 @@
 			isa = PBXGroup;
 			children = (
 				738542B029787F8800176F5B /* StoryCell.swift */,
+				737E881D297986C7006E79AE /* CategorieCell.swift */,
+				737E88242979A90B006E79AE /* CategorieSwiftUIView.swift */,
+				737E88282979AD08006E79AE /* CategoriesSwiftUIView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -367,6 +395,7 @@
 		73F08FFF2967144500E41566 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				737E881F29798D3C006E79AE /* UICollectionView */,
 				738542A929787E5F00176F5B /* UICollectionViewCell */,
 				73F090022967146700E41566 /* UIView */,
 				730041EA296820DF0051B588 /* UITextFileld */,
@@ -529,12 +558,18 @@
 				7385427D29787D2300176F5B /* AppTabBarController.swift in Sources */,
 				738542AB29787E5F00176F5B /* UICollectionViewCell+identifer.swift in Sources */,
 				738542A829787E4600176F5B /* LoginPasswordViewController.swift in Sources */,
+				737E882329798DF9006E79AE /* UICollectionView+register.swift in Sources */,
 				7385429B29787E4600176F5B /* FormTextField.swift in Sources */,
 				738542BA2978801E00176F5B /* LibraryViewController.swift in Sources */,
 				7385428229787DA500176F5B /* GoodAfterNoonView.swift in Sources */,
 				73F0900429672A0700E41566 /* UIView+CenterInSuperviewConstraints.swift in Sources */,
+				737E88292979AD08006E79AE /* CategoriesSwiftUIView.swift in Sources */,
+				737E88252979A90B006E79AE /* CategorieSwiftUIView.swift in Sources */,
+				737E88272979AA24006E79AE /* Category.swift in Sources */,
 				738542A029787E4600176F5B /* LoginSignUpFlowViewController.swift in Sources */,
+				737E882129798D97006E79AE /* UICollectionView+dequeReusable.swift in Sources */,
 				7385429D29787E4600176F5B /* UserDetailView.swift in Sources */,
+				737E881E297986C7006E79AE /* CategorieCell.swift in Sources */,
 				738542B129787F8800176F5B /* StoryCell.swift in Sources */,
 				738542A429787E4600176F5B /* RecoverPasswordViewController.swift in Sources */,
 				738542A329787E4600176F5B /* SelectGeneresViewController.swift in Sources */,
@@ -547,6 +582,7 @@
 				738542AE29787F7500176F5B /* StoriesSection.swift in Sources */,
 				7385428529787DBE00176F5B /* CircledImageView.swift in Sources */,
 				7385429E29787E4600176F5B /* AccentGreenButton.swift in Sources */,
+				737E881C29798047006E79AE /* CategoriesSection.swift in Sources */,
 				73F090012967145D00E41566 /* UIView+MakeConstraints.swift in Sources */,
 				738542B92978801E00176F5B /* ExploreViewController.swift in Sources */,
 				7385429A29787E4600176F5B /* SignUpViewController.swift in Sources */,

@@ -14,7 +14,7 @@ class StoryCell: UICollectionViewCell {
     let title: UILabel = {
         let label = UILabel()
         label.textColor = ColorsManager.textColor
-        label.font = .systemFont(ofSize: 16, weight: .light, width: .standard)
+        label.font = .systemFont(ofSize: 14, weight: .light, width: .standard)
         return label
     }()
     

@@ -28,11 +28,21 @@ class LoginPasswordViewController: LoginSignUpFlowViewController {
         
         userDetailView.heightConstraints(80)
         
+        
+        continueButton.addTarget(self, action: #selector(self.continueButtonTapped), for: .touchUpInside)
+        
     }
     
     // This method is called when the forgot password button is tapped
     @objc func forgotPasswordTapped() {
         navigationController?.pushViewController(RecoverPasswordViewController(), animated: true)
+    }
+    
+    @objc func continueButtonTapped(){
+        let appTabBarController = AppTabBarController()
+        appTabBarController.modalPresentationStyle = .fullScreen
+        
+        present(appTabBarController, animated: true)
     }
     
 }

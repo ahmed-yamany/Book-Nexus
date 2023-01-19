@@ -25,28 +25,28 @@ class AppTabBarController: UITabBarController {
         tabBar.tintColor = ColorsManager.textColor
         tabBar.backgroundColor = ColorsManager.backgroudColor
         tabBar.barTintColor = ColorsManager.textColor
-//        
+       
         viewControllers = [homeNavController, exploreNavController, libraryNavController]
-//
+
     }
     
 }
 
-//struct AppTabBarView: UIViewControllerRepresentable {
-//    
-//    typealias UIViewControllerType = UIViewController
-//
-//    func makeUIViewController(context: Context) -> UIViewController {
-//        return AppTabBarController()
-//    }
-//    
-//    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-//    }
-//}
-//
-//struct AppTabBarView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AppTabBarView()
-//            .ignoresSafeArea()
-//    }
-//}
+struct AppTabBarView: UIViewControllerRepresentable {
+    
+    typealias UIViewControllerType = UIViewController
+
+    func makeUIViewController(context: Context) -> UIViewController {
+        return AppTabBarController()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+    }
+}
+
+struct AppTabBarView_Previews: PreviewProvider {
+    static var previews: some View {
+        AppTabBarView()
+            .ignoresSafeArea()
+    }
+}

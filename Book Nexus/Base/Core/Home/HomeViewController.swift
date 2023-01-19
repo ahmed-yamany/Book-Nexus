@@ -6,21 +6,23 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeViewController: UICollectionViewController {
     
     lazy var sections: [any CollectionViewSectionDelegate] = [
-        StoriesSection()
+        StoriesSection(),
+        CategoriesSection(),
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialSetup()
         
-        collectionView.register(StoryCell.self, forCellWithReuseIdentifier: StoryCell.identifier)
+        collectionView.register(cell: StoryCell.self)
+        collectionView.register(cell: CategorieCell.self)
         collectionView.collectionViewLayout = self.collectionViewLayout()
 
-        
     }
     private func collectionViewLayout() -> UICollectionViewLayout{
         let layout = UICollectionViewCompositionalLayout { [ weak self]  sectionIndex, layoutEnvironment in
@@ -61,3 +63,4 @@ class HomeViewController: UICollectionViewController {
     }
 
 }
+

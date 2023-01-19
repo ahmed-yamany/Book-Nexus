@@ -25,9 +25,7 @@ class SelectGenryCategoriesViewController: LoginSignUpFlowViewController {
     let continueButton = AccentGreenButton(title: "Continue")
     let categoriesCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-//        layout.minimumLineSpacing = 0
-//        layout.estimatedItemSize =
-        
+
         layout.scrollDirection = .vertical
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -101,6 +99,7 @@ extension SelectGenryCategoriesViewController: UICollectionViewDelegate, UIColle
           let tagText = categories[indexPath.item]
           let font = UIFont.systemFont(ofSize: 30)
           let width = tagText.size(withAttributes: [NSAttributedString.Key.font: font]).width // add padding
+        
           return CGSize(width: width, height: 30)
 //        return CGSize(width: 100, height: 100)
     }

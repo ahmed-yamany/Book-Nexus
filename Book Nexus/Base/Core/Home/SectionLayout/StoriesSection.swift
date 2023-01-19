@@ -56,9 +56,7 @@ class StoriesSection: CollectionViewSectionDelegate{
     }
     
     func cellForItem(collectionView: UICollectionView, at indexpath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCell.identifier, for: indexpath) as? StoryCell else{
-            return UICollectionViewCell()
-        }
+        let cell = collectionView.dequeueReusableCell(withClass: StoryCell.self, for: indexpath)
         let story = self.items[indexpath.row]
         cell.setup(with: story)
         return cell        
