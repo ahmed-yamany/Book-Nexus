@@ -8,13 +8,19 @@
 import UIKit
 
 class CategoriesSection: CollectionViewSectionDelegate{
+    func sectionSupplementaryLayout(elementKind: String, alignment: NSRectAlignment) -> NSCollectionLayoutBoundarySupplementaryItem? {
+        nil
+    }
+    
+    func viewForSupplementaryElementOfKind(collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView? {
+        nil
+    }
+    
+    
+    
     typealias Response = Category
     
-    var items: [Category] = [
-        Category(name: "Trending", image: "flame", action: {print("hello ")}),
-            Category(name: "5-Minutes Read", image: "book"),
-            Category(name: "Quick Listen", image: "headphones"),
-        ]
+    var items: [Category] = []
     
     var itemsCount: Int = 0
     
@@ -51,5 +57,14 @@ class CategoriesSection: CollectionViewSectionDelegate{
         return cell
     }
     
+    func networkRequest(collection: UICollectionView) {
+        self.items = [
+            Category(name: "Trending", image: "flame", action: {print("hello ")}),
+            Category(name: "5-Minutes Read", image: "book"),
+            Category(name: "Quick Listen", image: "headphones"),
+                ]
+        self.itemsCount = self.items.count
+
+    }
     
 }

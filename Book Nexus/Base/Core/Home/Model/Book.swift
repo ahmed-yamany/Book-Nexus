@@ -8,5 +8,9 @@
 import UIKit
 
 struct Book{
-    
+    let image: String
+    let name: String
+    let authorName: String
+    let minutesToListen: Float
+    let minutesToRead: Float
 }

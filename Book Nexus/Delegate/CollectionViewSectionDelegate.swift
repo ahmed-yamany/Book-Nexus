@@ -20,6 +20,12 @@ protocol CollectionViewSectionDelegate: AnyObject {
     func itemLayout() -> NSCollectionLayoutItem
     func groupLayout() -> NSCollectionLayoutGroup
     func sectionLayout() -> NSCollectionLayoutSection
-    
+    func sectionSupplementaryLayout(elementKind: String, alignment: NSRectAlignment) -> NSCollectionLayoutBoundarySupplementaryItem?
+
     func cellForItem(collectionView: UICollectionView, at indexpath: IndexPath) -> UICollectionViewCell
+    func viewForSupplementaryElementOfKind(collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView?
+    
+    
+    func networkRequest(collection: UICollectionView)
 }
+

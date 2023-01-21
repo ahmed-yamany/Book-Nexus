@@ -8,24 +8,18 @@
 import UIKit
 
 class StoriesSection: CollectionViewSectionDelegate{
+    func sectionSupplementaryLayout(elementKind: String, alignment: NSRectAlignment) -> NSCollectionLayoutBoundarySupplementaryItem? {
+        nil
+    }
+    
+    func viewForSupplementaryElementOfKind(collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView? {
+        nil
+    }
+    
+    
     typealias Response = Story
     var title: String? = "hi"
-    var items: [Story] = [
-        Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
-        Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
-        Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
-        Story(image: UIImage(named: "book4"), title: "Michael Doug"),
-        Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
-        Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
-        Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
-        Story(image: UIImage(named: "book4"), title: "Michael Doug"),
-        Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
-        Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
-        Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
-        Story(image: UIImage(named: "book4"), title: "Michael Doug"),
-        
-
-    ]
+    var items: [Story] = []
     
     var itemsCount: Int = 0
     
@@ -34,7 +28,6 @@ class StoriesSection: CollectionViewSectionDelegate{
     
     init(title: String? = nil) {
         self.title = title
-        self.itemsCount = self.items.count
     }
     
     func itemLayout() -> NSCollectionLayoutItem {
@@ -60,5 +53,23 @@ class StoriesSection: CollectionViewSectionDelegate{
         let story = self.items[indexpath.row]
         cell.setup(with: story)
         return cell        
+    }
+    func networkRequest(collection: UICollectionView) {
+        
+        self.items = [        Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
+                              Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
+                              Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
+                              Story(image: UIImage(named: "book4"), title: "Michael Doug"),
+                              Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
+                              Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
+                              Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
+                              Story(image: UIImage(named: "book4"), title: "Michael Doug"),
+                              Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
+                              Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
+                              Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
+                              Story(image: UIImage(named: "book4"), title: "Michael Doug"),
+                              ]
+        self.itemsCount = self.items.count
+
     }
 }

@@ -14,11 +14,12 @@ class HomeViewController: UICollectionViewController {
         StoriesSection(),
         CategoriesSection(),
         CardSection(),
-        BooksSection(),
-        BooksSection()
-
+        BooksSection(title: "Trending"),
+        BooksSection(title: "5-Minutes read")
     ]
     
+    let musicView = UIView()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialSetup()
@@ -27,11 +28,29 @@ class HomeViewController: UICollectionViewController {
         navigationController?.navigationBar.shadowImage = UIImage.imageWithColor(color: .black)
         
         collectionView.showsVerticalScrollIndicator = false
+        // Register cells
         collectionView.register(cell: StoryCell.self)
         collectionView.register(cell: CategoriesCell.self)
         collectionView.register(cell: CartCell.self)
+        collectionView.register(cell: BookCell.self)
+        // Register supplementary views
+        collectionView.register(BooksSectionHeaderView.self, forSupplementaryViewOfKind: BooksSectionHeaderView.identifier, withReuseIdentifier: BooksSectionHeaderView.identifier)
+        
+        
+        
         collectionView.collectionViewLayout = self.collectionViewLayout()
-
+        
+        self.sections.forEach({$0.networkRequest(collection: self.collectionView)})
+        
+        
+        
+        musicView.heightConstraints(70)
+        musicView.backgroundColor = .red
+        tabBarController?.tabBar.addSubview(musicView)
+        musicView.fillXSuperViewConstraints()
+        musicView.makeConstraints(bottomAnchor: tabBarController?.tabBar.topAnchor)
+       
+        
     }
     private func collectionViewLayout() -> UICollectionViewLayout{
         let layout = UICollectionViewCompositionalLayout { [ weak self]  sectionIndex, layoutEnvironment in
@@ -58,6 +77,17 @@ class HomeViewController: UICollectionViewController {
         return currentSection.cellForItem(collectionView: collectionView, at: indexPath)
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        musicView.isHidden.toggle()
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let section = self.sections[indexPath.section]
+        guard let supplementaryElement = section.viewForSupplementaryElementOfKind(collectionView: collectionView, for: indexPath) else{return UICollectionReusableView()}
+        return supplementaryElement
+    }
+
     private func initialSetup() {
         collectionView.backgroundColor = ColorsManager.backgroudColor
         view.backgroundColor = ColorsManager.backgroudColor

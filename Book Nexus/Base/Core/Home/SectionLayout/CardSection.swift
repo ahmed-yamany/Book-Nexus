@@ -8,6 +8,16 @@
 import UIKit
 
 class CardSection: CollectionViewSectionDelegate{
+    func sectionSupplementaryLayout(elementKind: String, alignment: NSRectAlignment) -> NSCollectionLayoutBoundarySupplementaryItem? {
+        nil
+    }
+    
+    func viewForSupplementaryElementOfKind(collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView? {
+        nil
+    }
+    
+    
+    
     typealias Response = String
     
     var items: [Response] = []
@@ -42,6 +52,8 @@ class CardSection: CollectionViewSectionDelegate{
         let cell = collectionView.dequeueReusableCell(withClass: CartCell.self, for: indexpath)
         return cell
 
+    }
+    func networkRequest(collection: UICollectionView) {
     }
     
     
