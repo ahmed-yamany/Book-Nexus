@@ -8,23 +8,15 @@
 import UIKit
 
 class StoriesSection: CollectionViewSectionDelegate{
-    func sectionSupplementaryLayout(elementKind: String, alignment: NSRectAlignment) -> NSCollectionLayoutBoundarySupplementaryItem? {
-        nil
-    }
-    
-    func viewForSupplementaryElementOfKind(collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView? {
-        nil
-    }
-    
     
     typealias Response = Story
-    var title: String? = "hi"
+    var title: String?
     var items: [Story] = []
-    
     var itemsCount: Int = 0
     
-    var itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .absolute(40), heightDimension: .fractionalHeight(1))
+    var itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .absolute(90), heightDimension: .fractionalHeight(1))
     var groupSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .absolute(105))
+    var supplementaryViewSize: NSCollectionLayoutSize? = nil
     
     init(title: String? = nil) {
         self.title = title
@@ -37,7 +29,7 @@ class StoriesSection: CollectionViewSectionDelegate{
     }
     
     func groupLayout() -> NSCollectionLayoutGroup {
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: self.groupSize, subitem: self.itemLayout(), count: 4)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: self.groupSize, repeatingSubitem: self.itemLayout(), count: 4)
         return group
     }
     
@@ -48,28 +40,33 @@ class StoriesSection: CollectionViewSectionDelegate{
         return section
     }
     
-    func cellForItem(collectionView: UICollectionView, at indexpath: IndexPath) -> UICollectionViewCell {
+    func cellForItem(_ collectionView: UICollectionView, at indexpath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withClass: StoryCell.self, for: indexpath)
         let story = self.items[indexpath.row]
         cell.setup(with: story)
         return cell        
     }
-    func networkRequest(collection: UICollectionView) {
+    func networkRequest(_ collection: UICollectionView) {
         
-        self.items = [        Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
-                              Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
-                              Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
-                              Story(image: UIImage(named: "book4"), title: "Michael Doug"),
-                              Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
-                              Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
-                              Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
-                              Story(image: UIImage(named: "book4"), title: "Michael Doug"),
-                              Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
-                              Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
-                              Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
-                              Story(image: UIImage(named: "book4"), title: "Michael Doug"),
-                              ]
+        self.items = [
+                        Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
+                      Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
+                      Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
+                      Story(image: UIImage(named: "book4"), title: "Michael Doug"),
+                      Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
+                      Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
+                      Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
+                      Story(image: UIImage(named: "book4"), title: "Michael Doug"),
+                      Story(image: UIImage(named: "book1"), title: "Royryan Marcove"),
+                      Story(image: UIImage(named: "book2"), title: "Neil Gaiman"),
+                      Story(image: UIImage(named: "book3"), title: "Mark mcallister"),
+                      Story(image: UIImage(named: "book4"), title: "Michael Doug"),
+        ]
         self.itemsCount = self.items.count
-
+        collection.reloadData()
+    }
+    
+    func register(_ collectionView: UICollectionView) {
+        collectionView.register(cell: StoryCell.self)
     }
 }

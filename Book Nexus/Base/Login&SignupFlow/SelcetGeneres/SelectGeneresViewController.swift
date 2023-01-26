@@ -53,7 +53,7 @@ class SelectGenryCategoriesViewController: LoginSignUpFlowViewController {
         self.categoriesCollectionView.dataSource = self
         self.categoriesCollectionView.delegate = self
         
-//        bluredView.makeConstraints(topAnchor: view.topAnchor, padding: UIEdgeInsets(top: view.frame.height/6, left: 0, bottom: 0, right: 0 ))
+        bluredView.makeConstraints(topAnchor: view.topAnchor, padding: UIEdgeInsets(top: view.frame.height/6, left: 0, bottom: 0, right: 0 ))
         
         // Create and Add a target action to the forgot password button
         let showMoreButton = super.createNavigationButton(with: "Show More")
@@ -116,6 +116,8 @@ extension SelectGenryCategoriesViewController: UICollectionViewDelegate, UIColle
     }
     
 }
+
+
 
 struct MovieCategoriesView: UIViewControllerRepresentable {
     

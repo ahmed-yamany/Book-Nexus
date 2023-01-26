@@ -42,12 +42,10 @@ class BooksSectionHeaderView: UICollectionReusableView{
         addSubview(name)
         name.centerYInSuperview()
         name.makeConstraints(leadingAnchor: leadingAnchor, padding: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0))
-        
+
         addSubview(showAll)
         showAll.centerYInSuperview()
         showAll.makeConstraints(trailingAnchor: trailingAnchor, padding: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20))
-        
-        
     }
     
     required init?(coder: NSCoder) {

@@ -12,5 +12,6 @@ struct ColorsManager{
     static let accentBlack: UIColor = UIColor(red: 49/255, green: 51/255, blue: 51/255, alpha: 1)
     static let textColor: UIColor = .white
     static let backgroudColor: UIColor = .black
+    static let bgShade: UIColor = UIColor(red: 35/255, green: 37/255, blue: 56/255, alpha: 1)
 }
 

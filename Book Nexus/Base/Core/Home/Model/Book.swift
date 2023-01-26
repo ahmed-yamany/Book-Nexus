@@ -13,4 +13,6 @@ struct Book{
     let authorName: String
     let minutesToListen: Float
     let minutesToRead: Float
+    
+    let Image =  UIImage(named: "book3")
 }

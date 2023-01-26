@@ -1,66 +1,62 @@
 //
-//  BooksSection.swift
+//  TopicsSection.swift
 //  Book Nexus
 //
-//  Created by Ahmed Yamany on 19/01/2023.
+//  Created by Ahmed Yamany on 26/01/2023.
 //
 
 import UIKit
 
-class BooksSection: CollectionViewSectionDelegate{
-    typealias Response = Book
-    
-    var items: [Response] = []
 
-    var itemsCount: Int = 0
+class TopicSection: CollectionViewSectionDelegate {
+    typealias Response = TopicModel
     
-    var title: String?
+    var items: [TopicModel] = []
+    var itemsCount: Int = 1
     
-    init(title: String? = nil){
-        self.title = title
-        self.itemsCount = items.count
-    }
+    var title: String? = "Topics"
+    
     var itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-    var groupSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .absolute(150), heightDimension: .absolute(245))
+    
+    var groupSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(200))
+    
     var supplementaryViewSize: NSCollectionLayoutSize? = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(55))
+    
+    init(){ }
     
     func itemLayout() -> NSCollectionLayoutItem {
         return NSCollectionLayoutItem(layoutSize: self.itemSize)
     }
     
     func groupLayout() -> NSCollectionLayoutGroup {
-        let group =  NSCollectionLayoutGroup.horizontal(layoutSize: self.groupSize, repeatingSubitem: self.itemLayout(), count: 1)
-        group.contentInsets = .init(top: 0, leading: 5, bottom: 0, trailing: 5)
-        return group
+        return NSCollectionLayoutGroup.horizontal(layoutSize: self.groupSize, subitems: [self.itemLayout()])
     }
     
     func sectionLayout() -> NSCollectionLayoutSection {
         let section = NSCollectionLayoutSection(group: self.groupLayout())
-        section.orthogonalScrollingBehavior = .continuous
-        
         let supplementaryItem = self.sectionSupplementaryLayout(elementKind: BooksSectionHeaderView.identifier, alignment: .top)
+
         if let supplementaryItem = supplementaryItem{
             section.boundarySupplementaryItems = [supplementaryItem]
         }
-        
+
         return section
     }
     
     func cellForItem(_ collectionView: UICollectionView, at indexpath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withClass: BookCell.self, for: indexpath)
-        cell.setup(with: self.items[indexpath.row])
+        let cell = collectionView.dequeueReusableCell(withClass: TopicsCell.self, for: indexpath)
+        cell.setup()
         return cell
     }
     
     func networkRequest(_ collection: UICollectionView) {
-        self.items = [
-            Book(image: "book2", name: "The good guy", authorName: "Mark mcallister", minutesToListen: 5, minutesToRead: 8),
-            Book(image: "book3", name: "Futurama", authorName: "Michael Douglas jr.", minutesToListen: 12, minutesToRead: 9),
-            Book(image: "book1", name: "Explore your create mind to positivity", authorName: "Royryan Mercado", minutesToListen: 15, minutesToRead: 15)
-        ]
-        self.itemsCount = self.items.count
-        collection.reloadData()
+        
     }
+    
+    func register(_ collectionView: UICollectionView) {
+        collectionView.register(TopicsCell.self, forCellWithReuseIdentifier: TopicsCell.identifier)
+    }
+    
     
     func viewForSupplementaryElementOfKind(_ collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView? {
         let supplementaryIdentifier = BooksSectionHeaderView.identifier
@@ -71,16 +67,9 @@ class BooksSection: CollectionViewSectionDelegate{
 
     }
     
-    func sectionSupplementaryLayout(elementKind: String, alignment: NSRectAlignment) -> NSCollectionLayoutBoundarySupplementaryItem?{
+    func sectionSupplementaryLayout(elementKind: String, alignment: NSRectAlignment) -> NSCollectionLayoutBoundarySupplementaryItem? {
         return NSCollectionLayoutBoundarySupplementaryItem(layoutSize: self.supplementaryViewSize!, elementKind: elementKind, alignment: alignment)
     }
-   
     
-    func didSelectItem(_ viewController: UIViewController, at indexPath: IndexPath) {
-    }
-
     
-    func register(_ collectionView: UICollectionView) {
-        collectionView.register(cell: BookCell.self)
-    }
 }

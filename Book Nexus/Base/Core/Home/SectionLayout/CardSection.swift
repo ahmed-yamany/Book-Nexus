@@ -8,16 +8,6 @@
 import UIKit
 
 class CardSection: CollectionViewSectionDelegate{
-    func sectionSupplementaryLayout(elementKind: String, alignment: NSRectAlignment) -> NSCollectionLayoutBoundarySupplementaryItem? {
-        nil
-    }
-    
-    func viewForSupplementaryElementOfKind(collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView? {
-        nil
-    }
-    
-    
-    
     typealias Response = String
     
     var items: [Response] = []
@@ -28,10 +18,11 @@ class CardSection: CollectionViewSectionDelegate{
     
     init() {
     }
-    var itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
     
+    var itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
     var groupSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.98), heightDimension: .absolute(200))
-        
+    var supplementaryViewSize: NSCollectionLayoutSize? = nil
+
     func itemLayout() -> NSCollectionLayoutItem {
         return NSCollectionLayoutItem(layoutSize: self.itemSize)
     }
@@ -48,13 +39,15 @@ class CardSection: CollectionViewSectionDelegate{
         return section
     }
     
-    func cellForItem(collectionView: UICollectionView, at indexpath: IndexPath) -> UICollectionViewCell {
+    func cellForItem(_ collectionView: UICollectionView, at indexpath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withClass: CartCell.self, for: indexpath)
         return cell
 
     }
-    func networkRequest(collection: UICollectionView) {
+    func networkRequest(_ collection: UICollectionView) {
     }
     
-    
+    func register(_ collectionView: UICollectionView) {
+        collectionView.register(cell: CartCell.self)
+    }
 }
